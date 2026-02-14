@@ -1,7 +1,7 @@
 # ElevateWealthServices Website
 
 ## Overview
-ElevateWealthServices is a comprehensive financial services platform offering Mutual Fund Advisory, Insurance Solutions, and Trading & Brokerage services.
+ElevateWealthServices is a comprehensive financial services platform offering Mutual Fund Advisory, Insurance Solutions, and Trading & Investing services.
 
 ## Website Structure
 
@@ -42,7 +42,7 @@ Information about the company:
 Detailed service offerings:
 - **Mutual Fund Advisory**: Investment options, features, and key benefits
 - **Insurance Solutions**: Life, health, and general insurance options
-- **Trading & Brokerage**: Trading platforms, features, and advisory support
+- **Trading & Investing**: Trading platforms, features, and advisory support
 
 ### 4. **contact.html** - Contact Us
 Contact and consultation booking:

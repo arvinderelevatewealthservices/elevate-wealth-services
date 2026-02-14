@@ -547,6 +547,7 @@ nav .nav-links.active a {
   border-radius: 0.5rem;
   color: #374151;
   transition: background 0.2s ease;
+  text-align: center;
 }
 
 nav .nav-links.active a:hover {
