@@ -9,11 +9,23 @@
         @media (max-width: 768px) {
             h1 { font-size: 1.75rem !important; }
             h2 { font-size: 1.5rem !important; }
+
+            div[style*="grid-template-columns: 1fr 1fr"],
+            div[style*="grid-template-columns: repeat(3"] {
+                grid-template-columns: 1fr !important;
+            }
         }
         
         @media (max-width: 640px) {
             h1 { font-size: 1.5rem !important; }
             h2 { font-size: 1.25rem !important; }
+
+            div[style*="grid-template-columns: 1fr 1fr"],
+            div[style*="grid-template-columns: repeat(3"] {
+                grid-template-columns: 1fr !important;
+            }
+
+            section { padding: 2rem 1rem !important; }
         }
     </style>
 </head>
@@ -36,21 +48,21 @@
     </nav>
 
     <!-- Hero Section -->
-    <section style="padding: 5rem 1rem; background: linear-gradient(to bottom right, #f0f9ff, #eff6ff, white); margin-top: 5rem;">
+    <section style="padding: 3rem 1rem; background: linear-gradient(to bottom right, #f0f9ff, #eff6ff, white); margin-top: 4rem;">
         <div class="max-w-4xl" style="text-align: center;">
-            <h1 style="font-size: 3.5rem; font-weight: 700; color: #111827; margin-bottom: 1.5rem;">Our Services</h1>
-            <p style="font-size: 1.25rem; color: #4b5563; line-height: 1.6;">Comprehensive financial solutions tailored to your unique needs—from wealth building to complete risk protection</p>
+            <h1 style="font-size: 2.25rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">Our Services</h1>
+            <p style="font-size: 1rem; color: #4b5563; line-height: 1.6;">Comprehensive financial solutions tailored to your unique needs—from wealth building to complete risk protection</p>
         </div>
     </section>
 
     <!-- Mutual Funds Section -->
-    <section style="padding: 5rem 1rem; background: white;">
+    <section style="padding: 3rem 1rem; background: white;">
         <div class="max-w-7xl">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
-                <div style="background: linear-gradient(to bottom right, #3b82f6, #1d4ed8); border-radius: 1rem; padding: 3rem; color: white; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
-                    <div style="font-size: 4rem; margin-bottom: 1.5rem;">📈</div>
-                    <h2 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 1rem;">Mutual Fund Advisory</h2>
-                    <p style="font-size: 1.125rem; color: #dbeafe; margin-bottom: 1.5rem;">Build long-term wealth through systematic, disciplined investing</p>
+            <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; margin-bottom: 2rem;">
+                <div style="background: linear-gradient(to bottom right, #3b82f6, #1d4ed8); border-radius: 1rem; padding: 2rem; color: white; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📈</div>
+                    <h2 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.75rem;">Mutual Fund Advisory</h2>
+                    <p style="font-size: 0.95rem; color: #dbeafe; margin-bottom: 1rem;">Build long-term wealth through systematic, disciplined investing</p>
                     <div style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(0.75rem); border-radius: 0.5rem; padding: 1rem;">
                         <p style="font-size: 0.875rem;">
                             <strong>AMFI Registered Distributor</strong><br>
@@ -61,8 +73,8 @@
 
                 <div style="display: flex; flex-direction: column; gap: 1.5rem;">
                     <div>
-                        <h3 style="font-size: 1.875rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">What We Offer</h3>
-                        <p style="color: #4b5563; font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">As AMFI-registered Mutual Fund Distributors, we help investors build diversified portfolios aligned with their financial goals, risk appetite, and investment horizon.</p>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">What We Offer</h3>
+                        <p style="color: #4b5563; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">As AMFI-registered Mutual Fund Distributors, we help investors build diversified portfolios aligned with their financial goals, risk appetite, and investment horizon.</p>
                     </div>
 
                     <div style="background: #eff6ff; border-radius: 0.75rem; padding: 1.5rem;">
@@ -100,9 +112,9 @@
                 </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
-                <div style="background: linear-gradient(to bottom right, #f9fafb, white); border-radius: 0.75rem; padding: 2rem; border: 1px solid #e5e7eb;">
-                    <h4 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">Key Features & Benefits</h4>
+            <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div style="background: linear-gradient(to bottom right, #f9fafb, white); border-radius: 0.75rem; padding: 1.5rem; border: 1px solid #e5e7eb;">
+                    <h4 style="font-size: 1.1rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Key Features & Benefits</h4>
                     <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
                         <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
                             <span style="color: #16a34a; flex-shrink: 0; margin-top: 0.25rem;">✓</span>
@@ -179,14 +191,14 @@
     </section>
 
     <!-- Insurance Section -->
-    <section style="padding: 5rem 1rem; background: #f9fafb;">
+    <section style="padding: 3rem 1rem; background: #f9fafb;">
         <div class="max-w-7xl">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
+            <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; margin-bottom: 2rem;">
                 <div style="order: 2;">
-                    <h2 style="font-size: 2.25rem; font-weight: 700; color: #111827; margin-bottom: 1.5rem;">Insurance Solutions</h2>
-                    <p style="color: #4b5563; font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">Comprehensive protection plans for you and your loved ones. We help you choose the right insurance coverage to safeguard against life's uncertainties.</p>
+                    <h2 style="font-size: 1.75rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">Insurance Solutions</h2>
+                    <p style="color: #4b5563; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">Comprehensive protection plans for you and your loved ones. We help you choose the right insurance coverage to safeguard against life's uncertainties.</p>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1rem;">
                         <div style="background: white; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); text-align: center;">
                             <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">❤️</div>
                             <h5 style="font-weight: 600; color: #111827; margin-bottom: 0.25rem;">Life Insurance</h5>
@@ -205,10 +217,10 @@
                     </div>
                 </div>
 
-                <div style="background: linear-gradient(to bottom right, #10b981, #047857); border-radius: 1rem; padding: 3rem; color: white; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); order: 1;">
-                    <div style="font-size: 4rem; margin-bottom: 1.5rem;">🛡️</div>
-                    <h3 style="font-size: 1.875rem; font-weight: 700; margin-bottom: 1rem;">Protection You Can Trust</h3>
-                    <p style="color: #d1fae5; font-size: 1.125rem; margin-bottom: 1.5rem;">Secure your family's future with comprehensive insurance coverage</p>
+                <div style="background: linear-gradient(to bottom right, #10b981, #047857); border-radius: 1rem; padding: 2rem; color: white; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); order: 1;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🛡️</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">Protection You Can Trust</h3>
+                    <p style="color: #d1fae5; font-size: 0.95rem; margin-bottom: 1rem;">Secure your family's future with comprehensive insurance coverage</p>
                     <div style="display: flex; flex-direction: column; gap: 0.75rem;">
                         <div style="display: flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(0.75rem); border-radius: 0.5rem; padding: 0.75rem;">
                             <span>🏠</span>
@@ -226,10 +238,10 @@
                 </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 2rem;">
-                <div style="background: white; border-radius: 0.75rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">❤️</div>
-                    <h4 style="font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">Life Insurance</h4>
+            <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div style="background: white; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">❤️</div>
+                    <h4 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Life Insurance</h4>
                     <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
                         <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
                             <span style="color: #16a34a; flex-shrink: 0; margin-top: 0.25rem;">✓</span>
@@ -250,9 +262,9 @@
                     </ul>
                 </div>
 
-                <div style="background: white; border-radius: 0.75rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🛡️</div>
-                    <h4 style="font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">Health Insurance</h4>
+                <div style="background: white; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">🛡️</div>
+                    <h4 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Health Insurance</h4>
                     <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
                         <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
                             <span style="color: #16a34a; flex-shrink: 0; margin-top: 0.25rem;">✓</span>
@@ -273,9 +285,9 @@
                     </ul>
                 </div>
 
-                <div style="background: white; border-radius: 0.75rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🚗</div>
-                    <h4 style="font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">General Insurance</h4>
+                <div style="background: white; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">🚗</div>
+                    <h4 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">General Insurance</h4>
                     <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
                         <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
                             <span style="color: #16a34a; flex-shrink: 0; margin-top: 0.25rem;">✓</span>
@@ -311,13 +323,13 @@
     </section>
 
     <!-- Trading Section -->
-    <section style="padding: 5rem 1rem; background: white;">
+    <section style="padding: 3rem 1rem; background: white;">
         <div class="max-w-7xl">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
-                <div style="background: linear-gradient(to bottom right, #a855f7, #6d28d9); border-radius: 1rem; padding: 3rem; color: white; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
-                    <div style="font-size: 4rem; margin-bottom: 1.5rem;">📊</div>
-                    <h2 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 1rem;">Trading & Brokerage</h2>
-                    <p style="font-size: 1.125rem; color: #e9d5ff; margin-bottom: 1.5rem;">Execute trades efficiently with expert guidance and advanced platforms</p>
+            <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; margin-bottom: 2rem;">
+                <div style="background: linear-gradient(to bottom right, #a855f7, #6d28d9); border-radius: 1rem; padding: 2rem; color: white; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+                    <h2 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.75rem;">Trading & Brokerage</h2>
+                    <p style="font-size: 0.95rem; color: #e9d5ff; margin-bottom: 1rem;">Execute trades efficiently with expert guidance and advanced platforms</p>
                     <div style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(0.75rem); border-radius: 0.5rem; padding: 1rem;">
                         <p style="font-size: 0.875rem;">
                             <strong>SEBI-Regulated Services</strong><br>
@@ -328,8 +340,8 @@
 
                 <div style="display: flex; flex-direction: column; gap: 1.5rem;">
                     <div>
-                        <h3 style="font-size: 1.875rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">For Active Traders & Investors</h3>
-                        <p style="color: #4b5563; font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">Partner with us for seamless trading execution backed by professional advisory support. Whether you're a day trader or long-term investor—we provide the platforms and guidance you need.</p>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">For Active Traders & Investors</h3>
+                        <p style="color: #4b5563; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">Partner with us for seamless trading execution backed by professional advisory support. Whether you're a day trader or long-term investor—we provide the platforms and guidance you need.</p>
                     </div>
 
                     <div style="background: linear-gradient(to bottom right, #f3e8ff, #ede9fe); border-radius: 0.75rem; padding: 1.5rem; border: 1px solid #d8b4fe;">
@@ -364,9 +376,9 @@
                 </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
-                <div style="background: linear-gradient(to bottom right, #f9fafb, white); border-radius: 0.75rem; padding: 2rem; border: 1px solid #e5e7eb;">
-                    <h4 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">Platform Features</h4>
+            <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div style="background: linear-gradient(to bottom right, #f9fafb, white); border-radius: 0.75rem; padding: 1.5rem; border: 1px solid #e5e7eb;">
+                    <h4 style="font-size: 1.1rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Platform Features</h4>
                     <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
                         <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
                             <span style="color: #16a34a; flex-shrink: 0; margin-top: 0.25rem;">✓</span>
@@ -440,11 +452,11 @@
     </section>
 
     <!-- CTA Section -->
-    <section style="padding: 5rem 1rem; background: linear-gradient(to bottom right, #1f2937, #111827); color: white;">
+    <section style="padding: 3rem 1rem; background: linear-gradient(to bottom right, #1f2937, #111827); color: white;">
         <div class="max-w-4xl" style="text-align: center;">
-            <div style="font-size: 4rem; margin-bottom: 1.5rem;">📞</div>
-            <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem;">Not Sure Which Service Is Right for You?</h2>
-            <p style="font-size: 1.25rem; color: #d1d5db; margin-bottom: 2rem; line-height: 1.6;">Book a free consultation and let our experts help you design a personalized financial strategy.</p>
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📞</div>
+            <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Not Sure Which Service Is Right for You?</h2>
+            <p style="font-size: 1rem; color: #d1d5db; margin-bottom: 1.5rem; line-height: 1.6;">Book a free consultation and let our experts help you design a personalized financial strategy.</p>
             <a href="contact.html" style="display: inline-flex; align-items: center; gap: 0.5rem; background: white; color: #1f2937; padding: 1rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25);">
                 <span>Schedule Free Consultation</span>
                 <span>→</span>

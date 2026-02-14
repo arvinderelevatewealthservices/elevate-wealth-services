@@ -539,6 +539,13 @@ nav .nav-links a {
   nav .nav-links a {
     font-size: 0.85rem;
   }
+
+  /* Stack all inline 2-col grids */
+  div[style*="grid-template-columns: 1fr 1fr"],
+  div[style*="grid-template-columns: repeat(3"],
+  div[style*="grid-template-columns: repeat(auto-fit"] {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 @media (max-width: 640px) {
@@ -553,12 +560,25 @@ nav .nav-links a {
   }
 
   nav .nav-links {
-    gap: 0.75rem !important;
+    display: none !important;
   }
 
-  nav .nav-links a {
-    font-size: 0.8rem !important;
-    padding: 0.3rem 0.4rem !important;
+  nav .nav-links.active {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    gap: 0.5rem;
+  }
+
+  nav .nav-links.active a {
+    font-size: 0.95rem !important;
+    padding: 0.6rem 1rem !important;
   }
 
   .mobile-menu-btn {
