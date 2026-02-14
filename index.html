@@ -10,6 +10,10 @@
             h1 { font-size: 2rem !important; }
             h2 { font-size: 1.5rem !important; }
             p { font-size: 0.9rem !important; }
+            .hero-cta-row { flex-direction: column !important; }
+            .hero-cta-row .btn { width: 100% !important; justify-content: center; }
+            .cta-row { flex-direction: column !important; }
+            .cta-row .btn { width: 100% !important; justify-content: center; }
         }
         
         @media (max-width: 640px) {
@@ -30,16 +34,15 @@
     <nav>
         <div class="max-w-7xl" style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; min-height: 4rem;">
             <a href="index.html" class="logo" style="display: flex; align-items: center; min-width: fit-content; text-decoration: none;">
-                <img src="images/logo.png" alt="ElevateWealthServices" style="height: 2.5rem; width: auto; object-fit: contain;">
+                <img src="images/logo.png" alt="ElevateWealthServices" style="height: 3.5rem; width: auto; object-fit: contain;">
             </a>
-            <div class="nav-links" style="display: flex; gap: 1.5rem; align-items: center;">
-                <a href="index.html" class="transition-smooth" style="text-decoration: none; font-size: 0.9rem; padding: 0.4rem 0.6rem; color: #374151;">Home</a>
-                <a href="about.html" class="transition-smooth" style="text-decoration: none; font-size: 0.9rem; padding: 0.4rem 0.6rem; color: #374151;">About</a>
-                <a href="services.html" class="transition-smooth" style="text-decoration: none; font-size: 0.9rem; padding: 0.4rem 0.6rem; color: #374151;">Services</a>
-                <a href="contact.html" class="transition-smooth" style="text-decoration: none; font-size: 0.9rem; padding: 0.4rem 0.6rem; color: #374151;">Contact</a>
-                <a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem; white-space: nowrap;">Book</a>
+            <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html" class="btn btn-primary">Book</a>
             </div>
-            <button class="mobile-menu-btn" style="background: none; border: none; cursor: pointer; font-size: 1.1rem; padding: 0.4rem; min-width: 40px; min-height: 40px; border-radius: 0.3rem; color: #374151;">☰</button>
         </div>
     </nav>
 
@@ -67,12 +70,12 @@
                     Mutual Funds, Insurance & Trading Services under one trusted platform
                 </p>
 
-                <div style="display: flex; flex-direction: column; gap: 0.75rem; align-items: center; justify-content: center; flex-wrap: wrap; animation: fadeIn 1s ease-in; animation-delay: 0.4s; margin: 0 auto; width: 100%;">
+                <div class="hero-cta-row" style="display: flex; flex-direction: row; gap: 0.75rem; align-items: center; justify-content: center; flex-wrap: wrap; animation: fadeIn 1s ease-in; animation-delay: 0.4s; margin: 0 auto; width: 100%;">
                     <a href="contact.html" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.75rem; font-size: 0.95rem; width: auto;">
                         <span>Book a Consultation</span>
                         <span>→</span>
                     </a>
-                    <a href="https://wa.me/919876543210" target="_blank" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.75rem; font-size: 0.95rem; width: auto;">
+                    <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.75rem; font-size: 0.95rem; width: auto;">
                             <span>💬 WhatsApp</span>
                     </a>
                 </div>
@@ -338,7 +341,6 @@
                                     <li>✔️ Transparent, client-first approach</li>
                                     <li>✔️ No hidden charges or commissions</li>
                                     <li>✔️ Regular portfolio reviews and updates</li>
-                                    <li>✔️ 98% client satisfaction rate</li>
                                     <li>✔️ Accessible support—phone, WhatsApp, email, in-person</li>
                                     <li>✔️ End-to-end solutions: Mutual Funds, Insurance, Trading</li>
                                 </ul>
@@ -406,12 +408,12 @@
         <div class="max-w-4xl" style="text-align: center; position: relative; z-index: 10;">
             <h2 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem;">Ready to Elevate Your Financial Future?</h2>
             <p style="font-size: 1rem; margin-bottom: 1.5rem; color: #e0f2fe; line-height: 1.6;">Schedule a free, no-obligation consultation with our financial experts. Let's discuss your goals and create a personalized strategy to achieve them.</p>
-            <div style="display: flex; flex-direction: column; gap: 0.75rem; align-items: center; justify-content: center; flex-wrap: wrap;">
+                <div class="cta-row" style="display: flex; flex-direction: row; gap: 0.75rem; align-items: center; justify-content: center; flex-wrap: wrap;">
                 <a href="contact.html" class="btn" style="background: white; color: #0284c7; padding: 0.85rem 1.75rem; font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; width: auto;">
                     <span>Book Free Consultation</span>
                     <span>→</span>
                 </a>
-                <a href="https://wa.me/919876543210" target="_blank" class="btn" style="background: transparent; border: 2px solid white; color: white; padding: 0.85rem 1.75rem; font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; width: auto;">
+                <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="btn" style="background: transparent; border: 2px solid white; color: white; padding: 0.85rem 1.75rem; font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; width: auto;">
                     <span>💬</span>
                     <span>WhatsApp</span>
                 </a>
@@ -426,7 +428,7 @@
                 <!-- Company Info -->
                 <div class="footer-section" style="padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
                     <div style="display: flex; align-items: center; gap: 0.4rem; margin-bottom: 1rem;">
-                        <img src="images/logo.png" alt="ElevateWealthServices" style="height: 2rem; width: auto; object-fit: contain;">
+                        <img src="images/logo.png" alt="ElevateWealthServices" style="height: 2.5rem; width: auto; object-fit: contain;">
                     </div>
                     <p style="color: #9ca3af; font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.75rem;">Your trusted partner for Mutual Fund Advisory, Insurance Solutions, and Trading Services.</p>
                     <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem;">
@@ -443,7 +445,7 @@
                             <li><a href="index.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem; transition: all 0.3s ease;">Home</a></li>
                             <li><a href="about.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem; transition: all 0.3s ease;">About Us</a></li>
                             <li><a href="services.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem; transition: all 0.3s ease;">Services</a></li>
-                            <li><a href="contact.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem; transition: all 0.3s ease;">Contact</a></li>
+                            <li><a href="contact.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem; transition: all 0.3s ease;">Book</a></li>
                         </ul>
                     </div>
 
