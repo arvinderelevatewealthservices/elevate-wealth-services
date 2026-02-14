@@ -15,36 +15,13 @@
     <meta name="twitter:description" content="Mutual funds, insurance, and trading & investing under one trusted platform. Book a free consultation.">
     <meta name="twitter:image" content="https://elevatewealthservices.com/images/og-banner.png">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem !important; }
-            h2 { font-size: 1.5rem !important; }
-            p { font-size: 0.9rem !important; }
-            .hero-cta-row { flex-direction: column !important; }
-            .hero-cta-row .btn { width: 100% !important; justify-content: center; }
-            .cta-row { flex-direction: column !important; }
-            .cta-row .btn { width: 100% !important; justify-content: center; }
-        }
-        
-        @media (max-width: 640px) {
-            h1 { font-size: 1.5rem !important; }
-            h2 { font-size: 1.25rem !important; }
-            h3 { font-size: 1rem !important; }
-            p { font-size: 0.85rem !important; }
-            
-            .hero-blob { 
-                width: 12rem !important; 
-                height: 12rem !important; 
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="max-w-7xl" style="display: flex; align-items: center; justify-content: space-between; padding: 0.35rem 1rem; min-height: 3.5rem;">
-            <a href="index.html" class="logo" style="display: flex; align-items: center; min-width: fit-content; text-decoration: none;">
-                <img src="images/logo.png" alt="ElevateWealthServices" style="height: 3.2rem; width: auto; object-fit: contain;">
+        <div class="max-w-7xl site-nav-inner">
+            <a href="index.html" class="logo site-logo-link">
+                <img src="images/logo.png" alt="ElevateWealthServices" class="site-logo-image">
             </a>
             <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">☰</button>
             <div class="nav-links" id="nav-links">
@@ -57,14 +34,14 @@
     </nav>
 
     <!-- Hero Section -->
-    <section style="position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; background: linear-gradient(to bottom right, #f8fafc, #eff6ff, #eef2ff); padding-top: 3rem;">
-        <div style="position: absolute; inset: 0; overflow: hidden;">
+    <section class="index-hero-full">
+        <div class="index-hero-bg">
             <div class="hero-blob" style="position: absolute; top: 2rem; left: 1rem; width: 14rem; height: 14rem; background: #bae6fd; border-radius: 9999px; mix-blend-mode: multiply; filter: blur(3rem); opacity: 0.3; animation: blob 7s infinite;"></div>
             <div class="hero-blob" style="position: absolute; top: 8rem; right: 1rem; width: 14rem; height: 14rem; background: #e9d5ff; border-radius: 9999px; mix-blend-mode: multiply; filter: blur(3rem); opacity: 0.3; animation: blob 7s infinite; animation-delay: 2s;"></div>
             <div class="hero-blob" style="position: absolute; bottom: -2rem; left: 2rem; width: 14rem; height: 14rem; background: #fbcfe8; border-radius: 9999px; mix-blend-mode: multiply; filter: blur(3rem); opacity: 0.3; animation: blob 7s infinite; animation-delay: 4s;"></div>
         </div>
 
-        <div class="max-w-7xl" style="position: relative; z-index: 10; padding: 3rem 1rem;">
+        <div class="max-w-7xl index-hero-content">
             <div style="text-align: center; display: flex; flex-direction: column; gap: 1.5rem;">
                 <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(0.75rem); padding: 0.5rem 1rem; border-radius: 9999px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); width: fit-content; margin: 0 auto; animation: fadeIn 1s ease-in;">
                     <span style="color: #0284c7; font-size: 1rem;">✨</span>
@@ -118,14 +95,14 @@
 
 
     <!-- Services Snapshot -->
-    <section style="padding: 3rem 1rem; background: linear-gradient(to bottom, white, #f9fafb);">
+    <section class="index-section" style="background: linear-gradient(to bottom, white, #f9fafb);">
         <div class="max-w-7xl">
             <div style="text-align: center; margin-bottom: 3rem;">
                 <h2 style="font-size: 2rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">Comprehensive Financial Services</h2>
                 <p style="font-size: 0.95rem; color: #4b5563; max-width: 48rem; margin: 0 auto;">Click on any service below to book your free consultation and get started today</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+            <div class="index-services-grid">
                 <!-- Mutual Fund Advisory Card -->
                 <a href="contact.html?service=mutual-funds" style="text-decoration: none; cursor: pointer;">
                     <div style="background: white; border-radius: 1rem; padding: 1.5rem; border: 2px solid #e5e7eb; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; gap: 0.75rem; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='#0284c7'; this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 25px -5px rgba(2, 132, 199, 0.3)';" onmouseout="this.style.borderColor='#e5e7eb'; this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 15px -3px rgba(0, 0, 0, 0.1)';">
@@ -217,14 +194,14 @@
     </section>
 
     <!-- How It Works Section -->
-    <section style="padding: 3rem 1rem; background: linear-gradient(to bottom, #f9fafb, white);">
+    <section class="index-section" style="background: linear-gradient(to bottom, #f9fafb, white);">
         <div class="max-w-7xl">
             <div style="text-align: center; margin-bottom: 3rem;">
                 <h2 style="font-size: 2rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">How It Works</h2>
                 <p style="font-size: 0.95rem; color: #4b5563; max-width: 48rem; margin: 0 auto;">Simple steps to get started with your financial journey</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+            <div class="index-steps-grid">
                 <!-- Step 1 -->
                 <div style="background: white; border-radius: 1rem; padding: 1.5rem; text-align: center; border: 1px solid #e5e7eb; position: relative;">
                     <div style="display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border-radius: 9999px; background: linear-gradient(to bottom right, #0284c7, #1d4ed8); color: white; font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">1</div>
@@ -269,10 +246,10 @@
     </section>
 
     <!-- Investment Growth Infographic Section -->
-    <section style="padding: 3rem 1rem; background: white;">
+    <section class="index-section index-section-white">
         <div class="max-w-7xl">
             <div>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; margin-bottom: 3rem;">
+                <div class="index-layout-two" style="margin-bottom: 3rem;">
                     <div>
                         <h2 style="font-size: 1.75rem; font-weight: 700; color: #111827; margin-bottom: 1.25rem;">Power of Systematic Investing</h2>
                         <p style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; margin-bottom: 1rem;">Did you know? Starting with SIP investing as early as possible can turn ₹5,000/month into ₹1 Crore+ in 25 years with 12% annual returns.</p>
@@ -340,7 +317,7 @@
 
 
     <!-- Why Choose Us -->
-    <section style="padding: 3rem 1rem; background: white;">
+    <section class="index-section index-section-white">
         <div class="max-w-7xl">
             <div style="text-align: center; margin-bottom: 3rem;">
                                 <h2 style="font-size: 2rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">Why Choose ElevateWealthServices</h2>
@@ -356,7 +333,7 @@
                                 </ul>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+            <div class="index-choose-grid">
                 <div style="background: linear-gradient(to bottom right, #f9fafb, white); border-radius: 1rem; padding: 1.5rem; border: 1px solid #e5e7eb; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(2, 132, 199, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 15px -3px rgba(0, 0, 0, 0.1)';">
                     <div style="display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, #dbeafe, #c7d2fe); margin-bottom: 1rem;">
                         <span style="font-size: 1.25rem;">🎯</span>
@@ -409,13 +386,13 @@
     </section>
 
     <!-- CTA Section -->
-    <section style="padding: 3rem 1rem; background: linear-gradient(to bottom right, #0284c7, #1d4ed8, #1e3a8a); color: white; position: relative; overflow: hidden;">
+    <section class="index-cta-section">
         <div style="position: absolute; inset: 0;">
             <div style="position: absolute; top: 0; left: 25%; width: 18rem; height: 18rem; background: white; border-radius: 9999px; filter: blur(3rem); opacity: 0.1;"></div>
             <div style="position: absolute; bottom: 0; right: 25%; width: 18rem; height: 18rem; background: white; border-radius: 9999px; filter: blur(3rem); opacity: 0.1;"></div>
         </div>
         
-        <div class="max-w-4xl" style="text-align: center; position: relative; z-index: 10;">
+        <div class="max-w-4xl index-cta-inner">
             <h2 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem;">Ready to Elevate Your Financial Future?</h2>
             <p style="font-size: 1rem; margin-bottom: 1.5rem; color: #e0f2fe; line-height: 1.6;">Schedule a free, no-obligation consultation with our financial experts. Let's discuss your goals and create a personalized strategy to achieve them.</p>
                 <div class="cta-row" style="display: flex; flex-direction: row; gap: 0.75rem; align-items: center; justify-content: center; flex-wrap: wrap;">
@@ -432,16 +409,16 @@
     </section>
 
     <!-- Footer -->
-    <footer style="background: linear-gradient(to bottom right, #1f2937, #111827); color: #d1d5db;">
-        <div class="max-w-7xl" style="padding: 2.5rem 1rem;">
-            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+    <footer>
+        <div class="max-w-7xl site-footer-inner">
+            <div class="site-footer-grid">
                 <!-- Company Info -->
                 <div class="footer-section">
-                    <div style="display: flex; align-items: center; gap: 0.4rem; margin-bottom: 1rem;">
-                        <img src="images/logo.png" alt="ElevateWealthServices" style="height: 2.5rem; width: auto; object-fit: contain;">
+                    <div class="site-footer-brand">
+                        <img src="images/logo.png" alt="ElevateWealthServices" class="site-footer-logo">
                     </div>
-                    <p style="color: #9ca3af; font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.75rem;">Your trusted partner for Mutual Fund Advisory, Insurance Solutions, and Trading Services.</p>
-                    <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem;">
+                    <p class="site-footer-description">Your trusted partner for Mutual Fund Advisory, Insurance Solutions, and Trading Services.</p>
+                    <div class="site-footer-location">
                         <span>📍</span>
                         <span>Ludhiana, Punjab, India</span>
                     </div>
@@ -449,29 +426,29 @@
 
                 <!-- Quick Links -->
                 <div class="footer-section">
-                    <h3 style="color: white; font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">Quick Links</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                        <li><a href="index.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">Home</a></li>
-                        <li><a href="about.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">About Us</a></li>
-                        <li><a href="services.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">Services</a></li>
-                        <li><a href="contact.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">Book</a></li>
+                    <h3>Quick Links</h3>
+                    <ul class="site-footer-list">
+                        <li><a href="index.html" class="site-footer-link">Home</a></li>
+                        <li><a href="about.html" class="site-footer-link">About Us</a></li>
+                        <li><a href="services.html" class="site-footer-link">Services</a></li>
+                        <li><a href="contact.html" class="site-footer-link">Book</a></li>
                     </ul>
                 </div>
 
                 <!-- Services -->
                 <div class="footer-section">
-                    <h3 style="color: white; font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">Services</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                        <li style="font-size: 0.85rem; color: #d1d5db;">Mutual Funds</li>
-                        <li style="font-size: 0.85rem; color: #d1d5db;">Life Insurance</li>
-                        <li style="font-size: 0.85rem; color: #d1d5db;">Health Insurance</li>
-                        <li style="font-size: 0.85rem; color: #d1d5db;">Trading & Investing</li>
+                    <h3>Services</h3>
+                    <ul class="site-footer-list">
+                        <li class="site-footer-item">Mutual Funds</li>
+                        <li class="site-footer-item">Life Insurance</li>
+                        <li class="site-footer-item">Health Insurance</li>
+                        <li class="site-footer-item">Trading & Investing</li>
                     </ul>
                 </div>
             </div>
 
-            <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 1.5rem;">
-                <p style="font-size: 0.8rem; color: #9ca3af; text-align: center; margin: 0;">© 2026 ElevateWealthServices. All rights reserved.</p>
+            <div class="site-footer-bottom">
+                <p class="site-footer-copy">© 2026 ElevateWealthServices. All rights reserved.</p>
             </div>
         </div>
     </footer>
