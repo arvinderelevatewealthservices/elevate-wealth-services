@@ -4,8 +4,9 @@ const navLinks = document.querySelector('.nav-links');
 
 if (mobileMenuBtn) {
   mobileMenuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    mobileMenuBtn.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+    const isActive = navLinks.classList.toggle('active');
+    mobileMenuBtn.textContent = isActive ? '✕' : '☰';
+    mobileMenuBtn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
   });
 }
 
@@ -101,6 +102,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     navLinks.classList.remove('active');
     if (mobileMenuBtn) {
       mobileMenuBtn.textContent = '☰';
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
     }
   });
 });
