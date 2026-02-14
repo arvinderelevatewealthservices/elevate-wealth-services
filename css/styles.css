@@ -560,9 +560,49 @@ nav .nav-links.active .btn.btn-primary {
   justify-content: center;
 }
 
+/* Desktop nav: show links inline, hide hamburger */
+@media (min-width: 769px) {
+  .mobile-menu-btn {
+    display: none !important;
+  }
+  nav .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    position: static;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    border: none;
+    animation: none;
+  }
+  nav .nav-links a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #374151;
+    padding: 0.4rem 0;
+    border-radius: 0;
+  }
+  nav .nav-links a:hover {
+    color: #0284c7;
+    background: none;
+  }
+  nav .nav-links .btn.btn-primary {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.85rem;
+    min-height: unset;
+    color: white;
+  }
+  nav .nav-links .btn.btn-primary:hover {
+    color: white;
+  }
+}
+
 @media (max-width: 768px) {
-  /* Stack all inline 2-col grids */
+  /* Stack all inline multi-col grids */
   div[style*="grid-template-columns: 1fr 1fr"],
+  div[style*="grid-template-columns: 2fr 1fr 1fr"],
   div[style*="grid-template-columns: repeat(3"],
   div[style*="grid-template-columns: repeat(auto-fit"] {
     grid-template-columns: 1fr !important;
