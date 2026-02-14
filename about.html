@@ -15,13 +15,39 @@
     <meta name="twitter:description" content="Learn how we serve investors with transparent advisory across mutual funds, insurance, and trading & investing.">
     <meta name="twitter:image" content="https://elevatewealthservices.com/images/og-banner.png">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        @media (max-width: 768px) {
+            h1 { font-size: 1.75rem !important; }
+            h2 { font-size: 1.5rem !important; }
+            h3 { font-size: 1.25rem !important; }
+            p { font-size: 0.95rem !important; }
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 1.5rem !important; }
+            h2 { font-size: 1.25rem !important; }
+            h3 { font-size: 1.05rem !important; }
+            p { font-size: 0.9rem !important; }
+
+            section { padding: 2rem 1rem !important; }
+
+            .grid-2-col { grid-template-columns: 1fr !important; }
+            .grid-3-col { grid-template-columns: 1fr !important; }
+            .flex-reverse-mobile { flex-direction: column-reverse !important; }
+
+            /* Force all 2-col grids to stack */
+            div[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="max-w-7xl site-nav-inner">
-            <a href="index.html" class="logo site-logo-link">
-                <img src="images/logo.png" alt="ElevateWealthServices" class="site-logo-image">
+        <div class="max-w-7xl" style="display: flex; align-items: center; justify-content: space-between; padding: 0.35rem 1rem; min-height: 3.5rem;">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; min-width: fit-content; text-decoration: none;">
+                <img src="images/logo.png" alt="ElevateWealthServices" style="height: 3.2rem; width: auto; object-fit: contain;">
             </a>
             <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">☰</button>
             <div class="nav-links" id="nav-links">
@@ -34,39 +60,39 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="about-hero">
-        <div class="max-w-4xl about-hero-inner">
-            <h1>About ElevateWealthServices</h1>
-            <p>A professional financial services platform committed to helping individuals and families achieve financial freedom through transparent, client-first advisory and comprehensive wealth solutions.</p>
+    <section style="padding: 3rem 1rem; background: linear-gradient(to bottom right, #f0f9ff, #eff6ff, white); margin-top: 3rem;">
+        <div class="max-w-4xl" style="text-align: center;">
+            <h1 style="font-size: 2.25rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">About ElevateWealthServices</h1>
+            <p style="font-size: 1rem; color: #4b5563; line-height: 1.6;">A professional financial services platform committed to helping individuals and families achieve financial freedom through transparent, client-first advisory and comprehensive wealth solutions.</p>
         </div>
     </section>
 
     <!-- Who We Are -->
-    <section class="about-section about-section-white">
+    <section style="padding: 3rem 1rem; background: white;">
         <div class="max-w-7xl">
-            <div class="about-layout-two">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center;">
                 <div>
-                    <h2 class="about-heading-lg">Who We Are</h2>
-                    <div class="about-text-stack">
-                        <p><strong class="about-text-strong">ElevateWealthServices</strong> is a comprehensive financial services platform headquartered in Ludhiana, Punjab, specializing in Mutual Fund distribution, Insurance solutions, and Trading & Investing services.</p>
-                        <p>As an <strong class="about-text-strong">AMFI-registered Mutual Fund Distributor</strong>, we are committed to providing professional, transparent, and goal-oriented financial advisory services to investors across India.</p>
+                    <h2 style="font-size: 1.75rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">Who We Are</h2>
+                    <div style="display: flex; flex-direction: column; gap: 1rem; color: #4b5563; font-size: 0.95rem; line-height: 1.7;">
+                        <p><strong style="color: #111827;">ElevateWealthServices</strong> is a comprehensive financial services platform headquartered in Ludhiana, Punjab, specializing in Mutual Fund distribution, Insurance solutions, and Trading & Investing services.</p>
+                        <p>As an <strong style="color: #111827;">AMFI-registered Mutual Fund Distributor</strong>, we are committed to providing professional, transparent, and goal-oriented financial advisory services to investors across India.</p>
                         <p>We serve diverse clients—from first-time investors to experienced traders. What unites them is their trust in our commitment to their financial well-being.</p>
                     </div>
                 </div>
 
-                <div class="about-blue-panel">
-                    <div class="about-row">
-                        <span class="about-icon-xl">👁️</span>
+                <div style="background: linear-gradient(to bottom right, #dbeafe, #bfdbfe); border-radius: 1rem; padding: 2rem; display: flex; flex-direction: column; gap: 2rem;">
+                    <div style="display: flex; gap: 1rem;">
+                        <span style="font-size: 2rem; flex-shrink: 0;">👁️</span>
                         <div>
-                            <h3 class="about-subheading">Our Vision</h3>
-                            <p class="about-muted">To be the most trusted financial services partner in India, empowering every individual to achieve financial independence through disciplined investing and informed financial decisions.</p>
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Our Vision</h3>
+                            <p style="color: #374151; line-height: 1.6;">To be the most trusted financial services partner in India, empowering every individual to achieve financial independence through disciplined investing and informed financial decisions.</p>
                         </div>
                     </div>
-                    <div class="about-row">
-                        <span class="about-icon-xl">🎯</span>
+                    <div style="display: flex; gap: 1rem;">
+                        <span style="font-size: 2rem; flex-shrink: 0;">🎯</span>
                         <div>
-                            <h3 class="about-subheading">Our Mission</h3>
-                            <p class="about-muted">To simplify financial planning through transparent advice, personalized strategies, continuous education, and unwavering commitment to client success.</p>
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Our Mission</h3>
+                            <p style="color: #374151; line-height: 1.6;">To simplify financial planning through transparent advice, personalized strategies, continuous education, and unwavering commitment to client success.</p>
                         </div>
                     </div>
                 </div>
@@ -75,153 +101,153 @@
     </section>
 
     <!-- Core Values -->
-    <section class="about-section about-section-gray">
+    <section style="padding: 3rem 1rem; background: #f9fafb;">
         <div class="max-w-7xl">
-            <div class="about-center about-center-gap">
-                <h2 class="about-heading-lg">Our Core Values</h2>
-                <p class="about-subcopy">The principles that guide every decision we make and every recommendation we provide</p>
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h2 style="font-size: 1.75rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Our Core Values</h2>
+                <p style="font-size: 0.95rem; color: #4b5563; max-width: 48rem; margin: 0 auto;">The principles that guide every decision we make and every recommendation we provide</p>
             </div>
 
-            <div class="about-values-grid">
-                <div class="about-value-card">
-                    <div class="about-value-icon">🛡️</div>
-                    <h3 class="about-value-title">Trust & Integrity</h3>
-                    <p class="about-value-text">We operate with complete honesty and transparency. Your trust is our most valuable asset.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div style="background: white; border-radius: 0.75rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 3.5rem; height: 3.5rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, #0284c7, #0369a1); color: white; margin-bottom: 1.5rem; font-size: 1.5rem;">🛡️</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Trust & Integrity</h3>
+                    <p style="color: #4b5563;">We operate with complete honesty and transparency. Your trust is our most valuable asset.</p>
                 </div>
 
-                <div class="about-value-card">
-                    <div class="about-value-icon">🎯</div>
-                    <h3 class="about-value-title">Client-Centric Focus</h3>
-                    <p class="about-value-text">Every strategy is made with one question: "Is this in the client's best interest?"</p>
+                <div style="background: white; border-radius: 0.75rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 3.5rem; height: 3.5rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, #0284c7, #0369a1); color: white; margin-bottom: 1.5rem; font-size: 1.5rem;">🎯</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Client-Centric Focus</h3>
+                    <p style="color: #4b5563;">Every strategy is made with one question: "Is this in the client's best interest?"</p>
                 </div>
 
-                <div class="about-value-card">
-                    <div class="about-value-icon">🏆</div>
-                    <h3 class="about-value-title">Professional Excellence</h3>
-                    <p class="about-value-text">AMFI-certified, IRDAI-compliant, continuously updated with market knowledge.</p>
+                <div style="background: white; border-radius: 0.75rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 3.5rem; height: 3.5rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, #0284c7, #0369a1); color: white; margin-bottom: 1.5rem; font-size: 1.5rem;">🏆</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Professional Excellence</h3>
+                    <p style="color: #4b5563;">AMFI-certified, IRDAI-compliant, continuously updated with market knowledge.</p>
                 </div>
 
-                <div class="about-value-card">
-                    <div class="about-value-icon">📈</div>
-                    <h3 class="about-value-title">Long-Term Vision</h3>
-                    <p class="about-value-text">We focus on sustainable wealth creation, not quick gains.</p>
+                <div style="background: white; border-radius: 0.75rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 3.5rem; height: 3.5rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, #0284c7, #0369a1); color: white; margin-bottom: 1.5rem; font-size: 1.5rem;">📈</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Long-Term Vision</h3>
+                    <p style="color: #4b5563;">We focus on sustainable wealth creation, not quick gains.</p>
                 </div>
 
-                <div class="about-value-card">
-                    <div class="about-value-icon">❤️</div>
-                    <h3 class="about-value-title">Empathy & Understanding</h3>
-                    <p class="about-value-text">We listen, understand, and care about your financial journey.</p>
+                <div style="background: white; border-radius: 0.75rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 3.5rem; height: 3.5rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, #0284c7, #0369a1); color: white; margin-bottom: 1.5rem; font-size: 1.5rem;">❤️</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Empathy & Understanding</h3>
+                    <p style="color: #4b5563;">We listen, understand, and care about your financial journey.</p>
                 </div>
 
-                <div class="about-value-card">
-                    <div class="about-value-icon">⚡</div>
-                    <h3 class="about-value-title">Innovation & Adaptability</h3>
-                    <p class="about-value-text">While our values are timeless, our methods evolve with market changes.</p>
+                <div style="background: white; border-radius: 0.75rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 3.5rem; height: 3.5rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, #0284c7, #0369a1); color: white; margin-bottom: 1.5rem; font-size: 1.5rem;">⚡</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Innovation & Adaptability</h3>
+                    <p style="color: #4b5563;">While our values are timeless, our methods evolve with market changes.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- What Sets Us Apart -->
-    <section class="about-section about-section-gradient">
+    <section style="padding: 3rem 1rem; background: linear-gradient(to bottom right, #f0f9ff, #eff6ff);">
         <div class="max-w-7xl">
-            <div class="about-center about-center-gap">
-                <h2 class="about-heading-lg">What Sets Us Apart</h2>
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h2 style="font-size: 1.75rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">What Sets Us Apart</h2>
             </div>
 
-            <div class="about-grid-auto">
-                <div class="about-apart-card">
-                    <h3 class="about-apart-title">
-                        <span class="about-check">✓</span>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: #16a34a;">✓</span>
                         Hybrid Model: Online + Offline
                     </h3>
-                    <p class="about-apart-text">Access your portfolio digitally 24/7, but also have the option to visit our Ludhiana office for face-to-face consultations. The best of both worlds.</p>
+                    <p style="color: #4b5563; line-height: 1.6;">Access your portfolio digitally 24/7, but also have the option to visit our Ludhiana office for face-to-face consultations. The best of both worlds.</p>
                 </div>
 
-                <div class="about-apart-card">
-                    <h3 class="about-apart-title">
-                        <span class="about-check">✓</span>
+                <div style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: #16a34a;">✓</span>
                         Educational Focus
                     </h3>
-                    <p class="about-apart-text">We educate you about investment concepts and financial planning principles. Informed investors make better decisions.</p>
+                    <p style="color: #4b5563; line-height: 1.6;">We educate you about investment concepts and financial planning principles. Informed investors make better decisions.</p>
                 </div>
 
-                <div class="about-apart-card">
-                    <h3 class="about-apart-title">
-                        <span class="about-check">✓</span>
+                <div style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: #16a34a;">✓</span>
                         No Product Pushing
                     </h3>
-                    <p class="about-apart-text">We're advisors focused on your well-being, not salespeople meeting targets. Our recommendations are based on your needs, not our commissions.</p>
+                    <p style="color: #4b5563; line-height: 1.6;">We're advisors focused on your well-being, not salespeople meeting targets. Our recommendations are based on your needs, not our commissions.</p>
                 </div>
 
-                <div class="about-apart-card">
-                    <h3 class="about-apart-title">
-                        <span class="about-check">✓</span>
+                <div style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: #16a34a;">✓</span>
                         Lifelong Support
                     </h3>
-                    <p class="about-apart-text">Your financial journey doesn't end after the first investment. We provide continuous support throughout your financial life.</p>
+                    <p style="color: #4b5563; line-height: 1.6;">Your financial journey doesn't end after the first investment. We provide continuous support throughout your financial life.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Office Info -->
-    <section class="about-section about-section-white">
+    <section style="padding: 3rem 1rem; background: white;">
         <div class="max-w-7xl">
-            <div class="about-office-card">
-                <div class="about-layout-two">
+            <div style="background: linear-gradient(to bottom right, #111827, #1f2937); border-radius: 1rem; padding: 2rem; color: white;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;">
                     <div>
-                        <h2 class="about-heading-md">Visit Our Office</h2>
-                        <p class="about-office-copy">We believe in the power of personal connections. Our office in Ludhiana is open for consultations, document signing, or simply a friendly conversation about your financial goals.</p>
+                        <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Visit Our Office</h2>
+                        <p style="color: #d1d5db; line-height: 1.6; margin-bottom: 1.5rem; font-size: 0.9rem;">We believe in the power of personal connections. Our office in Ludhiana is open for consultations, document signing, or simply a friendly conversation about your financial goals.</p>
                         
-                        <div class="about-office-list">
-                            <div class="about-office-item">
-                                <span class="about-office-icon">📍</span>
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <div style="display: flex; gap: 1rem;">
+                                <span style="font-size: 1.5rem;">📍</span>
                                 <div>
-                                    <h3 class="about-office-label">Address</h3>
-                                    <p class="about-office-body">ElevateWealthServices<br>Ludhiana, Punjab<br>India - 141001</p>
+                                    <h3 style="font-weight: 600; margin-bottom: 0.25rem;">Address</h3>
+                                    <p style="color: #d1d5db;">ElevateWealthServices<br>Ludhiana, Punjab<br>India - 141001</p>
                                 </div>
                             </div>
 
-                            <div class="about-office-item">
-                                <span class="about-office-icon">🕒</span>
+                            <div style="display: flex; gap: 1rem;">
+                                <span style="font-size: 1.5rem;">🕒</span>
                                 <div>
-                                    <h3 class="about-office-label">Office Hours</h3>
-                                    <p class="about-office-body">Monday - Friday: 9:30 AM - 6:30 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                                    <h3 style="font-weight: 600; margin-bottom: 0.25rem;">Office Hours</h3>
+                                    <p style="color: #d1d5db;">Monday - Friday: 9:30 AM - 6:30 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
                                 </div>
                             </div>
 
-                            <div class="about-office-item">
-                                <span class="about-office-icon">📞</span>
+                            <div style="display: flex; gap: 1rem;">
+                                <span style="font-size: 1.5rem;">📞</span>
                                 <div>
-                                    <h3 class="about-office-label">Contact</h3>
-                                    <p class="about-office-body">+91 98765 43210<br><a href="mailto:info@elevatewealthservices.com" class="about-office-email">info@elevatewealthservices.com</a></p>
+                                    <h3 style="font-weight: 600; margin-bottom: 0.25rem;">Contact</h3>
+                                    <p style="color: #d1d5db;">+91 98765 43210<br><a href="mailto:info@elevatewealthservices.com" style="color: #38bdf8;">info@elevatewealthservices.com</a></p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="about-commit-card">
-                        <h3 class="about-commit-title">Our Commitment to You</h3>
-                        <div class="about-commit-list">
-                            <p class="about-commit-item">
-                                <span class="about-commit-icon">🤝</span>
+                    <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(1rem); border-radius: 1rem; padding: 1.5rem;">
+                        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">Our Commitment to You</h3>
+                        <div style="display: flex; flex-direction: column; gap: 1rem; color: #d1d5db;">
+                            <p style="display: flex; align-items: center; gap: 0.75rem;">
+                                <span style="font-size: 1.5rem;">🤝</span>
                                 <span>Always putting your financial interests first</span>
                             </p>
-                            <p class="about-commit-item">
-                                <span class="about-commit-icon">🔒</span>
+                            <p style="display: flex; align-items: center; gap: 0.75rem;">
+                                <span style="font-size: 1.5rem;">🔒</span>
                                 <span>Maintaining complete confidentiality of your financial data</span>
                             </p>
-                            <p class="about-commit-item">
-                                <span class="about-commit-icon">📊</span>
+                            <p style="display: flex; align-items: center; gap: 0.75rem;">
+                                <span style="font-size: 1.5rem;">📊</span>
                                 <span>Providing honest, unbiased advice</span>
                             </p>
-                            <p class="about-commit-item">
-                                <span class="about-commit-icon">⚡</span>
+                            <p style="display: flex; align-items: center; gap: 0.75rem;">
+                                <span style="font-size: 1.5rem;">⚡</span>
                                 <span>Responding promptly to your queries</span>
                             </p>
-                            <p class="about-commit-item">
-                                <span class="about-commit-icon">📈</span>
+                            <p style="display: flex; align-items: center; gap: 0.75rem;">
+                                <span style="font-size: 1.5rem;">📈</span>
                                 <span>Continuously helping you achieve your goals</span>
                             </p>
                         </div>
@@ -232,16 +258,16 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="max-w-7xl site-footer-inner">
-            <div class="site-footer-grid">
+    <footer style="background: linear-gradient(to bottom right, #1f2937, #111827); color: #d1d5db;">
+        <div class="max-w-7xl" style="padding: 2.5rem 1rem;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
                 <!-- Company Info -->
                 <div class="footer-section">
-                    <div class="site-footer-brand">
-                        <img src="images/logo.png" alt="ElevateWealthServices" class="site-footer-logo">
+                    <div style="display: flex; align-items: center; gap: 0.4rem; margin-bottom: 1rem;">
+                        <img src="images/logo.png" alt="ElevateWealthServices" style="height: 2.5rem; width: auto; object-fit: contain;">
                     </div>
-                    <p class="site-footer-description">Your trusted partner for Mutual Fund Advisory, Insurance Solutions, and Trading Services.</p>
-                    <div class="site-footer-location">
+                    <p style="color: #9ca3af; font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.75rem;">Your trusted partner for Mutual Fund Advisory, Insurance Solutions, and Trading Services.</p>
+                    <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem;">
                         <span>📍</span>
                         <span>Ludhiana, Punjab, India</span>
                     </div>
@@ -249,29 +275,29 @@
 
                 <!-- Quick Links -->
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul class="site-footer-list">
-                        <li><a href="index.html" class="site-footer-link">Home</a></li>
-                        <li><a href="about.html" class="site-footer-link">About Us</a></li>
-                        <li><a href="services.html" class="site-footer-link">Services</a></li>
-                        <li><a href="contact.html" class="site-footer-link">Book</a></li>
+                    <h3 style="color: white; font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">Quick Links</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+                        <li><a href="index.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">Home</a></li>
+                        <li><a href="about.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">About Us</a></li>
+                        <li><a href="services.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">Services</a></li>
+                        <li><a href="contact.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">Book</a></li>
                     </ul>
                 </div>
 
                 <!-- Services -->
                 <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul class="site-footer-list">
-                        <li class="site-footer-item">Mutual Funds</li>
-                        <li class="site-footer-item">Life Insurance</li>
-                        <li class="site-footer-item">Health Insurance</li>
-                        <li class="site-footer-item">Trading & Investing</li>
+                    <h3 style="color: white; font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">Services</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+                        <li style="font-size: 0.85rem; color: #d1d5db;">Mutual Funds</li>
+                        <li style="font-size: 0.85rem; color: #d1d5db;">Life Insurance</li>
+                        <li style="font-size: 0.85rem; color: #d1d5db;">Health Insurance</li>
+                        <li style="font-size: 0.85rem; color: #d1d5db;">Trading & Investing</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="site-footer-bottom">
-                <p class="site-footer-copy">© 2026 ElevateWealthServices. All rights reserved.</p>
+            <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 1.5rem;">
+                <p style="font-size: 0.8rem; color: #9ca3af; text-align: center; margin: 0;">© 2026 ElevateWealthServices. All rights reserved.</p>
             </div>
         </div>
     </footer>

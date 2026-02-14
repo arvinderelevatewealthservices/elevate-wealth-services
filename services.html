@@ -15,13 +15,36 @@
     <meta name="twitter:description" content="See our mutual fund, insurance, and trading & investing services and book a free consultation.">
     <meta name="twitter:image" content="https://elevatewealthservices.com/images/og-banner.png">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        @media (max-width: 768px) {
+            h1 { font-size: 1.75rem !important; }
+            h2 { font-size: 1.5rem !important; }
+
+            div[style*="grid-template-columns: 1fr 1fr"],
+            div[style*="grid-template-columns: repeat(3"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            h1 { font-size: 1.5rem !important; }
+            h2 { font-size: 1.25rem !important; }
+
+            div[style*="grid-template-columns: 1fr 1fr"],
+            div[style*="grid-template-columns: repeat(3"] {
+                grid-template-columns: 1fr !important;
+            }
+
+            section { padding: 2rem 1rem !important; }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="max-w-7xl site-nav-inner">
-            <a href="index.html" class="logo site-logo-link">
-                <img src="images/logo.png" alt="ElevateWealthServices" class="site-logo-image">
+        <div class="max-w-7xl" style="display: flex; align-items: center; justify-content: space-between; padding: 0.35rem 1rem; min-height: 3.5rem;">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; min-width: fit-content; text-decoration: none;">
+                <img src="images/logo.png" alt="ElevateWealthServices" style="height: 3.2rem; width: auto; object-fit: contain;">
             </a>
             <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">☰</button>
             <div class="nav-links" id="nav-links">
@@ -34,22 +57,22 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="services-hero">
-        <div class="max-w-4xl services-hero-inner">
-            <h1>Our Services</h1>
-            <p>Comprehensive financial solutions tailored to your unique needs—from wealth building to complete risk protection</p>
+    <section style="padding: 3rem 1rem; background: linear-gradient(to bottom right, #f0f9ff, #eff6ff, white); margin-top: 3rem;">
+        <div class="max-w-4xl" style="text-align: center;">
+            <h1 style="font-size: 2.25rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">Our Services</h1>
+            <p style="font-size: 1rem; color: #4b5563; line-height: 1.6;">Comprehensive financial solutions tailored to your unique needs—from wealth building to complete risk protection</p>
         </div>
     </section>
 
     <!-- Mutual Funds Section -->
-    <section class="services-section services-section-white">
+    <section style="padding: 3rem 1rem; background: white;">
         <div class="max-w-7xl">
-            <div class="services-layout-two">
-                <div class="services-block services-block-blue">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; margin-bottom: 2rem;">
+                <div style="background: linear-gradient(to bottom right, #3b82f6, #1d4ed8); border-radius: 1rem; padding: 2rem; color: white; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
                     <div style="font-size: 3rem; margin-bottom: 1rem;">📈</div>
                     <h2 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.75rem;">Mutual Fund Advisory</h2>
                     <p style="font-size: 0.95rem; color: #dbeafe; margin-bottom: 1rem;">Build long-term wealth through systematic, disciplined investing</p>
-                    <div class="services-glass">
+                    <div style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(0.75rem); border-radius: 0.5rem; padding: 1rem;">
                         <p style="font-size: 0.875rem;">
                             <strong>AMFI Registered Distributor</strong><br>
                             Professional guidance backed by regulatory compliance
@@ -63,12 +86,12 @@
                         <p style="color: #4b5563; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">As AMFI-registered Mutual Fund Distributors, we help investors build diversified portfolios aligned with their financial goals, risk appetite, and investment horizon.</p>
                     </div>
 
-                    <div class="services-highlight-blue">
+                    <div style="background: #eff6ff; border-radius: 0.75rem; padding: 1.5rem;">
                         <h4 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
                             <span style="color: #2563eb; font-size: 1.5rem;">📊</span>
                             Investment Categories We Cover
                         </h4>
-                        <div class="services-grid-two-mini">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
                             <div style="display: flex; align-items: center; gap: 0.5rem;">
                                 <span style="color: #2563eb;">✓</span>
                                 <span style="color: #374151;">Equity Funds</span>
@@ -98,7 +121,7 @@
                 </div>
             </div>
 
-            <div class="services-layout-two-tight">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
                 <div style="background: linear-gradient(to bottom right, #f9fafb, white); border-radius: 0.75rem; padding: 1.5rem; border: 1px solid #e5e7eb;">
                     <h4 style="font-size: 1.1rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Key Features & Benefits</h4>
                     <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
@@ -163,12 +186,12 @@
                 </div>
             </div>
 
-            <div class="services-disclaimer services-disclaimer-mf">
+            <div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 2rem;">
                 <strong style="color: #111827;">Mutual Fund Disclaimer:</strong> Mutual Fund investments are subject to market risks. Past performance is not indicative of future returns. ElevateWealthServices is an AMFI-registered Mutual Fund Distributor.
             </div>
 
-            <div class="services-center">
-                <a href="contact.html" class="services-cta-btn services-cta-mf">
+            <div style="text-align: center;">
+                <a href="contact.html" style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(to right, #2563eb, #1d4ed8); color: white; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
                     <span>Start Investing in Mutual Funds</span>
                     <span>→</span>
                 </a>
@@ -177,14 +200,14 @@
     </section>
 
     <!-- Insurance Section -->
-    <section class="services-section services-section-gray">
+    <section style="padding: 3rem 1rem; background: #f9fafb;">
         <div class="max-w-7xl">
-            <div class="services-layout-two">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; margin-bottom: 2rem;">
                 <div style="order: 2;">
                     <h2 style="font-size: 1.75rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">Insurance Solutions</h2>
                     <p style="color: #4b5563; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">Comprehensive protection plans for you and your loved ones. We help you choose the right insurance coverage to safeguard against life's uncertainties.</p>
 
-                    <div class="services-card-grid-3">
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1rem;">
                         <div style="background: white; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); text-align: center;">
                             <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">❤️</div>
                             <h5 style="font-weight: 600; color: #111827; margin-bottom: 0.25rem;">Life Insurance</h5>
@@ -203,7 +226,7 @@
                     </div>
                 </div>
 
-                <div class="services-block services-block-green" style="order: 1;">
+                <div style="background: linear-gradient(to bottom right, #10b981, #047857); border-radius: 1rem; padding: 2rem; color: white; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); order: 1;">
                     <div style="font-size: 3rem; margin-bottom: 1rem;">🛡️</div>
                     <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">Protection You Can Trust</h3>
                     <p style="color: #d1fae5; font-size: 0.95rem; margin-bottom: 1rem;">Secure your family's future with comprehensive insurance coverage</p>
@@ -224,7 +247,7 @@
                 </div>
             </div>
 
-            <div class="services-info-grid-3">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 1.5rem;">
                 <div style="background: white; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
                     <div style="font-size: 2rem; margin-bottom: 0.75rem;">❤️</div>
                     <h4 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Life Insurance</h4>
@@ -295,12 +318,12 @@
                 </div>
             </div>
 
-            <div class="services-disclaimer services-disclaimer-ins">
+            <div style="background: #dbeafe; border-left: 4px solid #2563eb; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 2rem;">
                 <strong style="color: #111827;">Insurance Disclaimer:</strong> Insurance is the subject matter of solicitation. For more details on risk factors, terms, and conditions, please read the policy wording carefully. ElevateWealthServices is a registered insurance intermediary.
             </div>
 
-            <div class="services-center">
-                <a href="contact.html" class="services-cta-btn services-cta-ins">
+            <div style="text-align: center;">
+                <a href="contact.html" style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(to right, #16a34a, #15803d); color: white; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
                     <span>Get Insurance Quote</span>
                     <span>→</span>
                 </a>
@@ -309,14 +332,14 @@
     </section>
 
     <!-- Trading Section -->
-    <section class="services-section services-section-white">
+    <section style="padding: 3rem 1rem; background: white;">
         <div class="max-w-7xl">
-            <div class="services-layout-two">
-                <div class="services-block services-block-purple">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; margin-bottom: 2rem;">
+                <div style="background: linear-gradient(to bottom right, #a855f7, #6d28d9); border-radius: 1rem; padding: 2rem; color: white; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
                     <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
                     <h2 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.75rem;">Trading & Investing</h2>
                     <p style="font-size: 0.95rem; color: #e9d5ff; margin-bottom: 1rem;">Execute trades efficiently with expert guidance and advanced platforms</p>
-                    <div class="services-glass">
+                    <div style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(0.75rem); border-radius: 0.5rem; padding: 1rem;">
                         <p style="font-size: 0.875rem;">
                             <strong>SEBI-Regulated Services</strong><br>
                             Partnered with leading brokerage platforms
@@ -332,7 +355,7 @@
 
                     <div style="background: linear-gradient(to bottom right, #f3e8ff, #ede9fe); border-radius: 0.75rem; padding: 1.5rem; border: 1px solid #d8b4fe;">
                         <h4 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">Trading Segments</h4>
-                        <div class="services-grid-two-mini">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
                             <div style="display: flex; align-items: center; gap: 0.5rem;">
                                 <span style="color: #a855f7;">✓</span>
                                 <span style="color: #374151;">Equity Cash</span>
@@ -362,7 +385,7 @@
                 </div>
             </div>
 
-            <div class="services-layout-two-tight">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
                 <div style="background: linear-gradient(to bottom right, #f9fafb, white); border-radius: 0.75rem; padding: 1.5rem; border: 1px solid #e5e7eb;">
                     <h4 style="font-size: 1.1rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Platform Features</h4>
                     <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
@@ -424,12 +447,12 @@
                 </div>
             </div>
 
-            <div class="services-disclaimer services-disclaimer-trd">
+            <div style="background: #fee2e2; border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 2rem;">
                 <strong style="color: #111827;">Trading Disclaimer:</strong> Trading in securities markets carries inherent risks including loss of capital. Past performance is not indicative of future results. Services provided in partnership with SEBI-registered brokers.
             </div>
 
-            <div class="services-center">
-                <a href="contact.html" class="services-cta-btn services-cta-trd">
+            <div style="text-align: center;">
+                <a href="contact.html" style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(to right, #a855f7, #7e22ce); color: white; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
                     <span>Open Trading Account</span>
                     <span>→</span>
                 </a>
@@ -438,12 +461,12 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="services-final-cta">
-        <div class="max-w-4xl services-final-cta-inner">
+    <section style="padding: 3rem 1rem; background: linear-gradient(to bottom right, #1f2937, #111827); color: white;">
+        <div class="max-w-4xl" style="text-align: center;">
             <div style="font-size: 3rem; margin-bottom: 1rem;">📞</div>
             <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Not Sure Which Service Is Right for You?</h2>
             <p style="font-size: 1rem; color: #d1d5db; margin-bottom: 1.5rem; line-height: 1.6;">Book a free consultation and let our experts help you design a personalized financial strategy.</p>
-            <a href="contact.html" class="services-final-cta-link">
+            <a href="contact.html" style="display: inline-flex; align-items: center; gap: 0.5rem; background: white; color: #1f2937; padding: 1rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25);">
                 <span>Schedule Free Consultation</span>
                 <span>→</span>
             </a>
@@ -451,16 +474,16 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="max-w-7xl site-footer-inner">
-            <div class="site-footer-grid">
+    <footer style="background: linear-gradient(to bottom right, #1f2937, #111827); color: #d1d5db;">
+        <div class="max-w-7xl" style="padding: 2.5rem 1rem;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
                 <!-- Company Info -->
                 <div class="footer-section">
-                    <div class="site-footer-brand">
-                        <img src="images/logo.png" alt="ElevateWealthServices" class="site-footer-logo">
+                    <div style="display: flex; align-items: center; gap: 0.4rem; margin-bottom: 1rem;">
+                        <img src="images/logo.png" alt="ElevateWealthServices" style="height: 2.5rem; width: auto; object-fit: contain;">
                     </div>
-                    <p class="site-footer-description">Your trusted partner for Mutual Fund Advisory, Insurance Solutions, and Trading Services.</p>
-                    <div class="site-footer-location">
+                    <p style="color: #9ca3af; font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.75rem;">Your trusted partner for Mutual Fund Advisory, Insurance Solutions, and Trading Services.</p>
+                    <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem;">
                         <span>📍</span>
                         <span>Ludhiana, Punjab, India</span>
                     </div>
@@ -468,29 +491,29 @@
 
                 <!-- Quick Links -->
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul class="site-footer-list">
-                        <li><a href="index.html" class="site-footer-link">Home</a></li>
-                        <li><a href="about.html" class="site-footer-link">About Us</a></li>
-                        <li><a href="services.html" class="site-footer-link">Services</a></li>
-                        <li><a href="contact.html" class="site-footer-link">Book</a></li>
+                    <h3 style="color: white; font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">Quick Links</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+                        <li><a href="index.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">Home</a></li>
+                        <li><a href="about.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">About Us</a></li>
+                        <li><a href="services.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">Services</a></li>
+                        <li><a href="contact.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">Book</a></li>
                     </ul>
                 </div>
 
                 <!-- Services -->
                 <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul class="site-footer-list">
-                        <li class="site-footer-item">Mutual Funds</li>
-                        <li class="site-footer-item">Life Insurance</li>
-                        <li class="site-footer-item">Health Insurance</li>
-                        <li class="site-footer-item">Trading & Investing</li>
+                    <h3 style="color: white; font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">Services</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+                        <li style="font-size: 0.85rem; color: #d1d5db;">Mutual Funds</li>
+                        <li style="font-size: 0.85rem; color: #d1d5db;">Life Insurance</li>
+                        <li style="font-size: 0.85rem; color: #d1d5db;">Health Insurance</li>
+                        <li style="font-size: 0.85rem; color: #d1d5db;">Trading & Investing</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="site-footer-bottom">
-                <p class="site-footer-copy">© 2026 ElevateWealthServices. All rights reserved.</p>
+            <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 1.5rem;">
+                <p style="font-size: 0.8rem; color: #9ca3af; text-align: center; margin: 0;">© 2026 ElevateWealthServices. All rights reserved.</p>
             </div>
         </div>
     </footer>
