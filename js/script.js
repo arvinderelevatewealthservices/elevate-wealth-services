@@ -1,24 +1,55 @@
-// Mobile Menu Toggle
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
+// Premium Mobile Menu Toggle
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
 
-if (mobileMenuBtn) {
-  mobileMenuBtn.addEventListener('click', () => {
-    const isActive = navLinks.classList.toggle('active');
-    mobileMenuBtn.textContent = isActive ? '✕' : '☰';
-    mobileMenuBtn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+if (mobileMenuToggle && navMenu) {
+  mobileMenuToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isActive = navMenu.classList.toggle('active');
+    mobileMenuToggle.classList.toggle('active', isActive);
+    mobileMenuToggle.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+    document.body.style.overflow = isActive ? 'hidden' : '';
+  });
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (navMenu && mobileMenuToggle && 
+        !navMenu.contains(e.target) && 
+        !mobileMenuToggle.contains(e.target)) {
+      navMenu.classList.remove('active');
+      mobileMenuToggle.classList.remove('active');
+      mobileMenuToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+  
+  // Close menu when clicking a link
+  const navLinks = document.querySelectorAll('.nav-menu a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      mobileMenuToggle.classList.remove('active');
+      mobileMenuToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
   });
 }
 
-// Navbar Scroll Effect
+// Navbar Scroll Effect with enhanced animation
 const navbar = document.querySelector('nav');
+let lastScrollY = 0;
+
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 20) {
+  const currentScrollY = window.scrollY;
+  
+  if (currentScrollY > 50) {
     navbar.classList.add('scrolled');
   } else {
     navbar.classList.remove('scrolled');
   }
-});
+  
+  lastScrollY = currentScrollY;
+}, { passive: true });
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -26,7 +57,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      // Close mobile menu if open
+      if (navMenu && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        if (mobileMenuToggle) {
+          mobileMenuToggle.classList.remove('active');
+          mobileMenuToggle.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        }
+      }
+      
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
 });
@@ -94,17 +135,6 @@ document.querySelectorAll('.animate-on-scroll').forEach(element => {
   element.style.transform = 'translateY(20px)';
   element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   observer.observe(element);
-});
-
-// Close mobile menu when link is clicked
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    if (mobileMenuBtn) {
-      mobileMenuBtn.textContent = '☰';
-      mobileMenuBtn.setAttribute('aria-expanded', 'false');
-    }
-  });
 });
 
 // WhatsApp button

@@ -38,24 +38,28 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Premium Navigation -->
     <nav>
-        <div class="max-w-7xl" style="display: flex; align-items: center; justify-content: space-between; padding: 0.35rem 1rem; min-height: 3.5rem;">
-            <a href="index.html" class="logo" style="display: flex; align-items: center; min-width: fit-content; text-decoration: none;">
-                <img src="images/logo.png" alt="ElevateWealthServices" style="height: 3.2rem; width: auto; object-fit: contain;">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="ElevateWealthServices">
             </a>
-            <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">☰</button>
-            <div class="nav-links" id="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="contact.html" class="btn btn-primary">Book</a>
-            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="nav-cta">Book a Consultation</a></li>
+            </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section style="padding: 3rem 1rem; background: linear-gradient(to bottom right, #f0f9ff, #eff6ff, white); margin-top: 3rem;">
+    <section style="padding: 3rem 1rem; background: linear-gradient(to bottom right, #f0f9ff, #eff6ff, white);">
         <div class="max-w-4xl" style="text-align: center;">
             <h1 style="font-size: 2.25rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">Book Your Free Consultation</h1>
             <p style="font-size: 1rem; color: #4b5563; line-height: 1.6;">Ready to take control of your financial future? Schedule a free, no-obligation session with our experts today.</p>
