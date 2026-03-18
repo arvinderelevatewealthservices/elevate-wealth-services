@@ -75,42 +75,45 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Form Handling
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-  contactForm.addEventListener('submit', async (e) => {
+  contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Sending...';
+    const originalText = submitBtn.textContent.trim();
+    submitBtn.textContent = 'Redirecting to WhatsApp...';
     submitBtn.disabled = true;
 
-    // Simulate form submission
-    setTimeout(() => {
-      const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData);
-      
-      console.log('Form submitted:', data);
-      
-      // Show success message
-      const successMessage = document.getElementById('successMessage');
-      if (successMessage) {
-        successMessage.style.display = 'block';
-        contactForm.style.display = 'none';
-        
-        // Reset after 3 seconds
-        setTimeout(() => {
-          contactForm.style.display = 'block';
-          successMessage.style.display = 'none';
-          contactForm.reset();
-          submitBtn.textContent = originalText;
-          submitBtn.disabled = false;
-        }, 3000);
-      } else {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-        alert('Thank you! We will get back to you within 24 hours.');
-        contactForm.reset();
-      }
-    }, 1000);
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData);
+
+    const serviceLabels = {
+      'mutual-funds': 'Mutual Fund Advisory',
+      insurance: 'Insurance Solutions',
+      trading: 'Trading & Investing',
+      all: 'All Services / General Consultation'
+    };
+
+    const consultationMessage = [
+      'Hello ElevateWealthServices,',
+      '',
+      'I would like to book a consultation. Please find my details below:',
+      '',
+      'Name: ' + (data.name || '-'),
+      'Phone: ' + (data.phone || '-'),
+      'Email: ' + (data.email || 'Not provided'),
+      'Service: ' + (serviceLabels[data.service] || data.service || '-'),
+      'Message: ' + (data.message || 'No additional message'),
+      '',
+      'Kindly contact me at your earliest convenience.',
+      '',
+      'Thank you.'
+    ].join('\n');
+
+    const whatsappUrl = 'https://wa.me/919815519057?text=' + encodeURIComponent(consultationMessage);
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
   });
 }
 
@@ -145,14 +148,122 @@ if (whatsappBtn) {
 }
 
 // Phone and email click handlers
-document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
   link.addEventListener('click', function(e) {
     // Allow default behavior for phone links
   });
 });
 
-document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
   link.addEventListener('click', function(e) {
     // Allow default behavior for email links
   });
 });
+
+// Brand Partners — Luxury Slider
+(function () {
+  function getVis() {
+    return window.innerWidth >= 1024 ? 4 : window.innerWidth >= 640 ? 2 : 1;
+  }
+
+  function BPSlider(trackId, wrapId, prevId, nextId, dotsId) {
+    var track = document.getElementById(trackId);
+    var wrap = document.getElementById(wrapId);
+    var prevBtn = document.getElementById(prevId);
+    var nextBtn = document.getElementById(nextId);
+    var dotsEl = document.getElementById(dotsId);
+    if (!track || !wrap) return null;
+
+    var idx = 0;
+    var timer = null;
+    var total = track.children.length;
+
+    function maxIdx() { return Math.max(0, total - getVis()); }
+
+    function buildDots() {
+      if (!dotsEl) return;
+      dotsEl.innerHTML = '';
+      var count = maxIdx() + 1;
+      for (var i = 0; i < count; i++) {
+        var d = document.createElement('button');
+        d.className = 'bp-dot' + (i === idx ? ' active' : '');
+        d.setAttribute('aria-label', 'Slide ' + (i + 1));
+        (function (n) {
+          d.addEventListener('click', function () { go(n); resetTimer(); });
+        })(i);
+        dotsEl.appendChild(d);
+      }
+    }
+
+    function update() {
+      var vis = getVis();
+      var cardW = wrap.offsetWidth / vis;
+      for (var i = 0; i < track.children.length; i++) {
+        track.children[i].style.minWidth = cardW + 'px';
+        track.children[i].style.maxWidth = cardW + 'px';
+      }
+      if (idx > maxIdx()) idx = maxIdx();
+      track.style.transform = 'translateX(' + (-idx * cardW) + 'px)';
+      var dots = dotsEl ? dotsEl.querySelectorAll('.bp-dot') : [];
+      for (var j = 0; j < dots.length; j++) {
+        dots[j].classList.toggle('active', j === idx);
+      }
+    }
+
+    function go(n) {
+      idx = Math.max(0, Math.min(n, maxIdx()));
+      update();
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', function () {
+      go(idx <= 0 ? maxIdx() : idx - 1); resetTimer();
+    });
+    if (nextBtn) nextBtn.addEventListener('click', function () {
+      go(idx >= maxIdx() ? 0 : idx + 1); resetTimer();
+    });
+
+    wrap.addEventListener('mouseenter', function () { clearInterval(timer); });
+    wrap.addEventListener('mouseleave', startTimer);
+    window.addEventListener('resize', function () { buildDots(); update(); });
+
+    function startTimer() {
+      if (maxIdx() <= 0) return;
+      timer = setInterval(function () { go(idx >= maxIdx() ? 0 : idx + 1); }, 4000);
+    }
+    function resetTimer() { clearInterval(timer); startTimer(); }
+
+    buildDots();
+    update();
+    startTimer();
+
+    return {
+      update: function () { buildDots(); update(); }
+    };
+  }
+
+  var sliders = {};
+
+  document.querySelectorAll('.bp-tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('.bp-tab').forEach(function (t) { t.classList.remove('active'); });
+      document.querySelectorAll('.bp-panel').forEach(function (p) { p.classList.remove('active'); });
+      tab.classList.add('active');
+      var panel = document.getElementById('bpp-' + tab.dataset.tab);
+      if (panel) {
+        panel.classList.add('active');
+        if (sliders[tab.dataset.tab]) sliders[tab.dataset.tab].update();
+      }
+    });
+  });
+
+  function initSliders() {
+    sliders.mf = BPSlider('bpst-mf', 'bpsw-mf', 'bparr-mf-prev', 'bparr-mf-next', 'bpdots-mf');
+    sliders.ins = BPSlider('bpst-ins', 'bpsw-ins', 'bparr-ins-prev', 'bparr-ins-next', 'bpdots-ins');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSliders);
+  } else {
+    initSliders();
+  }
+})();

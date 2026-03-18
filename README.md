@@ -138,9 +138,9 @@ Place your images in the `images/` directory and reference them:
 ## Contact Information
 
 **ElevateWealthServices**
-- **Phone**: +91 98765 43210
-- **Email**: info@elevatewealthservices.com
-- **Location**: Ludhiana, Punjab, India
+- **Phone**: +91 98155 19057
+- **Email**: arvinder@elevatewealthservices.com
+- **Location**: Cash Dhara Bazar, Near Bawa Lal Mandir, Karmon Deori, Amritsar
 - **Hours**: Monday-Friday 9:30 AM - 6:30 PM, Saturday 10:00 AM - 4:00 PM
 
 ## Compliance
