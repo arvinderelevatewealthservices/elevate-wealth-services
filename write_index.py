@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Elevate Wealth Services — Smart Financial Solutions</title>
-  <meta name="description" content="Expert Mutual Fund Advisory, Insurance Solutions, and Trading &amp; Investing Services in Amritsar. AMFI Registered, IRDAI Certified, SEBI Compliant.">
-  <meta property="og:title" content="Elevate Wealth Services — Smart Financial Solutions">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://elevatewealthservices.com/">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+import os
 
-<!-- NAVIGATION -->
+path = r'c:\Users\itxul\Desktop\ElevateWealthServices\index.html'
+
+NAV = '''<!-- NAVIGATION -->
 <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo" aria-label="Elevate Wealth Services — Home">
@@ -37,7 +27,91 @@
   <a href="about.html">About</a>
   <a href="services.html">Services</a>
   <a href="contact.html" class="mobile-cta">Book a Consultation</a>
-</div>
+</div>'''
+
+FOOTER = '''<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/ElevateWealthServicesLogo.png" alt="Elevate Wealth Services">
+        <p>Your trusted partner for Mutual Fund Advisory, Insurance Solutions, and Trading &amp; Investing Services across India.</p>
+        <address>Cash Dhara Bazar, Near Bawa Lal Mandir,<br>Karmon Deori, Amritsar, Punjab</address>
+        <div class="social-links" aria-label="Social media links">
+          <a href="https://wa.me/919815519057" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.12 1.528 5.856L.057 23.882l6.187-1.622A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.368l-.36-.213-3.672.964.981-3.593-.234-.369A9.818 9.818 0 1112 21.818z"/></svg>
+          </a>
+          <a href="mailto:arvinder@elevatewealthservices.com" class="social-link" aria-label="Email us">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Quick links">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Book Consultation</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Our services">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="services.html#mutual-funds">Mutual Fund Advisory</a></li>
+          <li><a href="services.html#insurance">Insurance Solutions</a></li>
+          <li><a href="services.html#trading">Trading &amp; Investing</a></li>
+          <li><a href="contact.html">Free Consultation</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="f-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.34 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+919815519057">+91 98155 19057</a>
+        </div>
+        <div class="f-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:arvinder@elevatewealthservices.com">arvinder@elevatewealthservices.com</a>
+        </div>
+        <div class="f-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <address>Cash Dhara Bazar, Near Bawa Lal Mandir, Karmon Deori, Amritsar</address>
+        </div>
+        <div class="f-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <p>Mon&ndash;Fri: 9:30 AM &ndash; 6:30 PM<br>Sat: 10:00 AM &ndash; 4:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Elevate Wealth Services. All rights reserved.</p>
+      <div class="footer-badges" aria-label="Regulatory compliance badges">
+        <span class="footer-badge">AMFI Registered</span>
+        <span class="footer-badge">IRDAI Certified</span>
+        <span class="footer-badge">SEBI Compliant</span>
+      </div>
+    </div>
+    <p class="footer-disclaimer">
+      Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Insurance is the subject matter of solicitation. Past performance is not indicative of future results. Elevate Wealth Services is an AMFI Registered Mutual Fund Distributor and IRDAI Licensed Insurance Agent.
+    </p>
+  </div>
+</footer>'''
+
+html = f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Elevate Wealth Services — Smart Financial Solutions</title>
+  <meta name="description" content="Expert Mutual Fund Advisory, Insurance Solutions, and Trading &amp; Investing Services in Amritsar. AMFI Registered, IRDAI Certified, SEBI Compliant.">
+  <meta property="og:title" content="Elevate Wealth Services — Smart Financial Solutions">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elevatewealthservices.com/">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+{NAV}
 
 <!-- ═══════════════════════════════════════
      HERO
@@ -92,18 +166,18 @@
     </div>
     <div class="hero-stats" role="list" aria-label="Key statistics">
       <div class="hero-stat" role="listitem">
-        <span class="hero-stat-num gradient-text" data-count="15" data-suffix="+">15+</span>
-        <span class="hero-stat-label">Years Experience</span>
+        <span class="hero-stat-num gradient-text" data-count="500" data-suffix="+">500+</span>
+        <span class="hero-stat-label">Happy Investors</span>
       </div>
       <div class="stat-sep" aria-hidden="true"></div>
       <div class="hero-stat" role="listitem">
-        <span class="hero-stat-num gradient-text">50+</span>
+        <span class="hero-stat-num gradient-text">20+</span>
         <span class="hero-stat-label">Partner Institutions</span>
       </div>
       <div class="stat-sep" aria-hidden="true"></div>
       <div class="hero-stat" role="listitem">
-        <span class="hero-stat-num gradient-text">24/7</span>
-        <span class="hero-stat-label">Support Availability</span>
+        <span class="hero-stat-num gradient-text">3</span>
+        <span class="hero-stat-label">Expert Services</span>
       </div>
     </div>
   </div>
@@ -115,76 +189,25 @@
 </section>
 
 <!-- ═══════════════════════════════════════
-     FEES + COMPARISON
+     LOGO SHOWCASE
 ═══════════════════════════════════════ -->
-<section class="fees-section section-pad" aria-labelledby="fees-heading">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-label">Transparent Compensation</span>
-      <h2 id="fees-heading">No Advisory Fee Charged by Elevate</h2>
-      <p>We provide guidance without charging a separate advisory fee to clients. Product and platform terms remain subject to issuer and partner disclosures.</p>
-      <div class="teal-rule"></div>
-    </div>
-    <div class="fees-grid">
-      <article class="fee-card reveal d-1" aria-label="No hidden charges">
-        <h3>0 Additional Advisory Fee</h3>
-        <p>No separate advisory invoice from Elevate Wealth Services for consultation and planning support.</p>
-      </article>
-      <article class="fee-card reveal d-2" aria-label="Clear disclosure">
-        <h3>Clear Compensation Disclosure</h3>
-        <p>Any commissions, brokerage, fund expenses, or policy charges are governed by partner product documents and regulations.</p>
-      </article>
-      <article class="fee-card reveal d-3" aria-label="No surprise costs">
-        <h3>No Surprise Deductions</h3>
-        <p>Before onboarding, we explain applicable costs, lock-ins, and risk factors in plain language.</p>
-      </article>
-    </div>
-
-    <div class="comparison-wrap reveal">
-      <h3 class="comparison-title">At-a-Glance Service Comparison</h3>
-      <div class="comparison-table-wrap">
-        <table class="comparison-table" aria-label="Service comparison table">
-          <thead>
-            <tr>
-              <th scope="col">Service</th>
-              <th scope="col">Primary Goal</th>
-              <th scope="col">Time Horizon</th>
-              <th scope="col">Risk Level</th>
-              <th scope="col">Best For</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-label="Service">Mutual Fund Advisory</td>
-              <td data-label="Primary Goal">Long-term wealth creation</td>
-              <td data-label="Time Horizon">3 to 15+ years</td>
-              <td data-label="Risk Level">Low to High (based on allocation)</td>
-              <td data-label="Best For">Goal-based investors and SIP planners</td>
-            </tr>
-            <tr>
-              <td data-label="Service">Insurance Solutions</td>
-              <td data-label="Primary Goal">Financial protection and continuity</td>
-              <td data-label="Time Horizon">Multi-year protection horizon</td>
-              <td data-label="Risk Level">Low (coverage-oriented)</td>
-              <td data-label="Best For">Families and income protectors</td>
-            </tr>
-            <tr>
-              <td data-label="Service">Trading and Investing</td>
-              <td data-label="Primary Goal">Market participation and returns</td>
-              <td data-label="Time Horizon">Short to long term</td>
-              <td data-label="Risk Level">Medium to High</td>
-              <td data-label="Best For">Active market participants</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="service-cta-row" role="list" aria-label="Service-specific actions">
-        <a href="contact.html?service=mutual-funds" class="btn btn-ghost" role="listitem">Start Mutual Funds Plan</a>
-        <a href="contact.html?service=insurance" class="btn btn-ghost" role="listitem">Review Insurance Coverage</a>
-        <a href="contact.html?service=trading" class="btn btn-ghost" role="listitem">Get Trading Guidance</a>
-      </div>
-      <p class="mini-disclaimer">For complete risk and product disclosure details, see our <a href="disclaimer.html">Disclaimer</a>.</p>
-    </div>
+<section class="logo-showcase" aria-label="Brand identity">
+  <div class="logo-showcase-bg" aria-hidden="true">
+    <div class="logo-glow"></div>
+    <svg class="logo-bar-chart" viewBox="0 0 340 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect class="bar-rise" x="10" y="40" width="24" height="40" rx="3" fill="#2FB5C4" fill-opacity="0.6"/>
+      <rect class="bar-rise" x="50" y="20" width="24" height="60" rx="3" fill="#2FB5C4" fill-opacity="0.5" style="animation-delay:0.15s"/>
+      <rect class="bar-rise" x="90" y="30" width="24" height="50" rx="3" fill="#2FB5C4" fill-opacity="0.4" style="animation-delay:0.25s"/>
+      <rect class="bar-rise" x="130" y="10" width="24" height="70" rx="3" fill="#2FB5C4" fill-opacity="0.6" style="animation-delay:0.1s"/>
+      <rect class="bar-rise" x="170" y="25" width="24" height="55" rx="3" fill="#2FB5C4" fill-opacity="0.5" style="animation-delay:0.2s"/>
+      <rect class="bar-rise" x="210" y="5"  width="24" height="75" rx="3" fill="#44D4E0" fill-opacity="0.65" style="animation-delay:0.05s"/>
+      <rect class="bar-rise" x="250" y="15" width="24" height="65" rx="3" fill="#2FB5C4" fill-opacity="0.55" style="animation-delay:0.3s"/>
+      <rect class="bar-rise" x="290" y="35" width="24" height="45" rx="3" fill="#2FB5C4" fill-opacity="0.4" style="animation-delay:0.35s"/>
+    </svg>
+  </div>
+  <div class="logo-showcase-inner reveal">
+    <img src="images/ElevateWealthServicesLogo.png" alt="Elevate Wealth Services" width="200">
+    <p class="logo-tagline">"Elevating every investment journey with expertise and integrity."</p>
   </div>
 </section>
 
@@ -266,56 +289,6 @@
 </section>
 
 <!-- ═══════════════════════════════════════
-     CALCULATORS
-═══════════════════════════════════════ -->
-<section class="calc-section section-pad" aria-labelledby="calc-heading">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-label">Interactive Tools</span>
-      <h2 id="calc-heading">Quick Investment Calculators</h2>
-      <p>Estimate your potential corpus with SIP and Lumpsum projections. Results are illustrative, not guaranteed returns.</p>
-      <div class="teal-rule"></div>
-    </div>
-    <div class="calc-grid">
-      <article class="calc-card reveal d-1" aria-labelledby="sip-calc-heading">
-        <h3 id="sip-calc-heading">SIP Future Value</h3>
-        <form class="calc-form" data-calc="sip">
-          <label for="sipMonthly">Monthly SIP Amount (INR)</label>
-          <input id="sipMonthly" name="sipMonthly" type="number" min="500" step="100" value="5000" required>
-
-          <label for="sipReturn">Expected Annual Return (%)</label>
-          <input id="sipReturn" name="sipReturn" type="number" min="1" max="30" step="0.1" value="12" required>
-
-          <label for="sipYears">Investment Duration (Years)</label>
-          <input id="sipYears" name="sipYears" type="number" min="1" max="40" step="1" value="15" required>
-
-          <button type="submit" class="btn btn-primary">Calculate SIP Value</button>
-        </form>
-        <div class="calc-result" id="sipResult" aria-live="polite"></div>
-      </article>
-
-      <article class="calc-card reveal d-2" aria-labelledby="lumpsum-calc-heading">
-        <h3 id="lumpsum-calc-heading">Lumpsum Future Value</h3>
-        <form class="calc-form" data-calc="lumpsum">
-          <label for="lumpPrincipal">Investment Amount (INR)</label>
-          <input id="lumpPrincipal" name="lumpPrincipal" type="number" min="1000" step="500" value="100000" required>
-
-          <label for="lumpReturn">Expected Annual Return (%)</label>
-          <input id="lumpReturn" name="lumpReturn" type="number" min="1" max="30" step="0.1" value="12" required>
-
-          <label for="lumpYears">Investment Duration (Years)</label>
-          <input id="lumpYears" name="lumpYears" type="number" min="1" max="40" step="1" value="10" required>
-
-          <button type="submit" class="btn btn-primary">Calculate Future Value</button>
-        </form>
-        <div class="calc-result" id="lumpsumResult" aria-live="polite"></div>
-      </article>
-    </div>
-    <p class="mini-disclaimer">Calculator outputs are illustrative estimates based on fixed assumptions and do not represent assured returns. Read our <a href="disclaimer.html">Disclaimer</a>.</p>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
      WHY ELEVATE
 ═══════════════════════════════════════ -->
 <section class="why-section section-pad" aria-labelledby="why-heading">
@@ -325,7 +298,7 @@
       <div class="why-left">
         <span class="section-label reveal">Why Choose Us</span>
         <h2 id="why-heading" class="reveal">Your Financial Success is Our Measure of Excellence</h2>
-        <p class="reveal">At Elevate Wealth Services, we combine regulatory expertise with a deeply personal approach. Every investor gets a dedicated advisor who understands their unique financial situation and goals.</p>
+        <p class="reveal">At Elevate Wealth Services, we combine regulatory expertise with a deeply personal approach. Every client gets a dedicated advisor who understands their unique financial situation and goals.</p>
         <div class="why-features" role="list">
           <div class="why-feat reveal d-1" role="listitem">
             <div class="why-feat-icon" aria-hidden="true">
@@ -349,7 +322,7 @@
             <div class="why-feat-icon" aria-hidden="true">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
             </div>
-            <div><h4>Proven Process</h4><p>A disciplined advisory framework focused on long-term wealth growth and risk control.</p></div>
+            <div><h4>Proven Results</h4><p>500+ satisfied investors with consistent, long-term wealth growth.</p></div>
           </div>
           <div class="why-feat reveal d-5" role="listitem">
             <div class="why-feat-icon" aria-hidden="true">
@@ -369,12 +342,12 @@
       <div class="why-right">
         <div class="why-stats" role="list">
           <div class="why-stat-row reveal d-1" role="listitem">
-            <span class="why-stat-num gradient-text" data-count="15" data-suffix="+">15+</span>
-            <span class="why-stat-label">Years of market and financial advisory experience</span>
+            <span class="why-stat-num gradient-text" data-count="500" data-suffix="+">500+</span>
+            <span class="why-stat-label">Investors trust Elevate Wealth Services with their financial futures</span>
           </div>
           <div class="why-stat-row reveal d-2" role="listitem">
-            <span class="why-stat-num gradient-text">50+</span>
-            <span class="why-stat-label">Partner AMCs, insurers, and brokerage platforms across India</span>
+            <span class="why-stat-num gradient-text">20+</span>
+            <span class="why-stat-label">Partner AMCs, Insurance &amp; Brokerage institutions across India</span>
           </div>
           <div class="why-stat-row reveal d-3" role="listitem">
             <span class="why-stat-num gradient-text">3</span>
@@ -391,57 +364,6 @@
         </a>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     FAQ + MYTHS
-═══════════════════════════════════════ -->
-<section class="faq-section section-pad" aria-labelledby="faq-heading">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-label">Knowledge Center</span>
-      <h2 id="faq-heading">FAQ and Myth vs Fact</h2>
-      <p>Clear answers to common investor questions and quick myth-busters for better decision making.</p>
-      <div class="teal-rule"></div>
-    </div>
-    <div class="faq-layout">
-      <div class="faq-list reveal" aria-label="Frequently asked questions">
-        <article class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">How much should I invest monthly in SIP?</button>
-          <div class="faq-answer"><p>Start with an amount you can sustain consistently. Discipline over time matters more than timing the market.</p></div>
-        </article>
-        <article class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">Do I need both insurance and investments?</button>
-          <div class="faq-answer"><p>Yes, they solve different goals. Insurance protects income and dependents; investments target long-term wealth creation.</p></div>
-        </article>
-        <article class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">Is trading suitable for every investor?</button>
-          <div class="faq-answer"><p>No. Active trading has higher risk and requires process discipline. Suitability depends on risk profile and experience.</p></div>
-        </article>
-        <article class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">How often should my portfolio be reviewed?</button>
-          <div class="faq-answer"><p>A periodic review every 6 to 12 months is generally useful, or earlier if your goals or risk tolerance change materially.</p></div>
-        </article>
-      </div>
-
-      <div class="myth-card reveal" aria-label="Myth versus fact">
-        <div class="myth-tabs" role="tablist" aria-label="Myth and fact tabs">
-          <button class="myth-tab active" type="button" data-myth-tab="myth" role="tab" aria-selected="true">Myth</button>
-          <button class="myth-tab" type="button" data-myth-tab="fact" role="tab" aria-selected="false">Fact</button>
-        </div>
-        <div class="myth-panels">
-          <div class="myth-panel active" data-myth-panel="myth" role="tabpanel">
-            <h3>"I need a very large amount to begin investing."</h3>
-            <p>Many investors delay because they think investing starts only with big capital.</p>
-          </div>
-          <div class="myth-panel" data-myth-panel="fact" role="tabpanel">
-            <h3>You can start small and scale over time.</h3>
-            <p>Structured SIPs allow you to begin with manageable monthly amounts while compounding works in your favor.</p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -483,45 +405,13 @@
 </section>
 
 <!-- ═══════════════════════════════════════
-     REGULATORY DISCLOSURE HUB
-═══════════════════════════════════════ -->
-<section class="disclosure-section section-pad" aria-labelledby="disclosure-heading">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-label">Regulatory Hub</span>
-      <h2 id="disclosure-heading">Disclosure and Risk Information</h2>
-      <p>We operate under regulated frameworks. Please review disclosures before acting on any investment or insurance decision.</p>
-      <div class="teal-rule"></div>
-    </div>
-    <div class="disclosure-grid">
-      <article class="disclosure-card reveal d-1">
-        <h3>Mutual Funds</h3>
-        <p>Mutual fund investments are subject to market risks. Scheme documents should be read carefully before investing.</p>
-      </article>
-      <article class="disclosure-card reveal d-2">
-        <h3>Insurance</h3>
-        <p>Insurance is the subject matter of solicitation. Terms, conditions, waiting periods, and exclusions apply as per policy wording.</p>
-      </article>
-      <article class="disclosure-card reveal d-3">
-        <h3>Trading and Equities</h3>
-        <p>Securities market participation involves risk of loss. Past performance is not indicative of future outcomes.</p>
-      </article>
-    </div>
-    <div class="disclosure-actions reveal">
-      <a href="disclaimer.html" class="btn btn-ghost">Read Full Disclaimer</a>
-      <a href="contact.html" class="btn btn-primary">Talk to an Advisor</a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
      BENEFITS
 ═══════════════════════════════════════ -->
 <section class="benefits-section section-pad" aria-labelledby="benefits-heading">
   <div class="container">
     <div class="section-header reveal">
       <span class="section-label">The Elevate Advantage</span>
-      <h2 id="benefits-heading">Why Serious Investors Choose Us</h2>
+      <h2 id="benefits-heading">Why Thousands of Investors Choose Us</h2>
       <p>Every feature is designed to give you confidence, clarity, and control over your financial future.</p>
       <div class="teal-rule"></div>
     </div>
@@ -540,7 +430,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
         </div>
         <div>
-          <h4>Investor-First Approach</h4>
+          <h4>Client-First Approach</h4>
           <p>Your goals come first — we never push products that don&apos;t serve your best interests.</p>
         </div>
       </div>
@@ -663,10 +553,14 @@
         </button>
         <div class="bpswrap" id="bpsw-mf">
           <div class="bpstrack" id="bpst-mf">
-            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><img src="images/hdfc-mf.svg" alt="HDFC Mutual Fund" class="bpc-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="bpc-fb" style="background:#0E2A3A;">HDFC</div></div><p class="bpc-name">HDFC Mutual Fund</p><p class="bpc-type">AMC Partner</p></div></div>
-            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><img src="images/nippon-india-mf.svg" alt="Nippon India Mutual Fund" class="bpc-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="bpc-fb" style="background:#2FB5C4;color:#071520;">Nippon</div></div><p class="bpc-name">Nippon India MF</p><p class="bpc-type">AMC Partner</p></div></div>
-            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><img src="images/kotak-mf.svg" alt="Kotak Mutual Fund" class="bpc-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="bpc-fb" style="background:#0E2A3A;">Kotak</div></div><p class="bpc-name">Kotak Mutual Fund</p><p class="bpc-type">AMC Partner</p></div></div>
-            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><img src="images/motilal-oswal-mf.svg" alt="Motilal Oswal Mutual Fund" class="bpc-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="bpc-fb" style="background:#1A3548;">MO</div></div><p class="bpc-name">Motilal Oswal MF</p><p class="bpc-type">AMC Partner</p></div></div>
+            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><div class="bpc-fb" style="display:flex;background:#1F7A8C;">SBI</div></div><p class="bpc-name">SBI Mutual Fund</p><p class="bpc-type">AMC Partner</p></div></div>
+            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><div class="bpc-fb" style="display:flex;background:#0E2A3A;">HDFC</div></div><p class="bpc-name">HDFC Mutual Fund</p><p class="bpc-type">AMC Partner</p></div></div>
+            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><div class="bpc-fb" style="display:flex;background:#1A3548;font-size:0.75rem;">ICICI</div></div><p class="bpc-name">ICICI Prudential MF</p><p class="bpc-type">AMC Partner</p></div></div>
+            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><div class="bpc-fb" style="display:flex;background:#2FB5C4;color:#071520;">NI</div></div><p class="bpc-name">Nippon India MF</p><p class="bpc-type">AMC Partner</p></div></div>
+            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><div class="bpc-fb" style="display:flex;background:#C9A84C;color:#071520;">AXIS</div></div><p class="bpc-name">Axis Mutual Fund</p><p class="bpc-type">AMC Partner</p></div></div>
+            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><div class="bpc-fb" style="display:flex;background:#0E2A3A;">KMF</div></div><p class="bpc-name">Kotak Mutual Fund</p><p class="bpc-type">AMC Partner</p></div></div>
+            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><div class="bpc-fb" style="display:flex;background:#1F7A8C;">DSP</div></div><p class="bpc-name">DSP Mutual Fund</p><p class="bpc-type">AMC Partner</p></div></div>
+            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><div class="bpc-fb" style="display:flex;background:#1A3548;font-size:0.7rem;">Mirae</div></div><p class="bpc-name">Mirae Asset MF</p><p class="bpc-type">AMC Partner</p></div></div>
           </div>
         </div>
         <button class="bparr bparr-next" id="bparr-mf-next" aria-label="Next mutual fund partners">
@@ -684,12 +578,12 @@
         </button>
         <div class="bpswrap" id="bpsw-ins">
           <div class="bpstrack" id="bpst-ins">
-            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><img src="images/hdfc-ergo.svg" alt="HDFC ERGO" class="bpc-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="bpc-fb" style="background:#0E2A3A;">ERGO</div></div><p class="bpc-name">HDFC ERGO</p><p class="bpc-type">Insurance Partner</p></div></div>
-            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><img src="images/icici-lombard.png" alt="ICICI Lombard" class="bpc-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="bpc-fb" style="background:#2FB5C4;color:#071520;">ICICI</div></div><p class="bpc-name">ICICI Lombard</p><p class="bpc-type">Insurance Partner</p></div></div>
-            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><img src="images/tata-aig.svg" alt="Tata AIG" class="bpc-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="bpc-fb" style="background:#1A3548;">Tata</div></div><p class="bpc-name">Tata AIG</p><p class="bpc-type">Insurance Partner</p></div></div>
-            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><img src="images/star-health.svg" alt="Star Health" class="bpc-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="bpc-fb" style="background:#1F7A8C;">STAR</div></div><p class="bpc-name">Star Health</p><p class="bpc-type">Insurance Partner</p></div></div>
-            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><img src="images/aditya-birla-health.svg" alt="Aditya Birla Health" class="bpc-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="bpc-fb" style="background:#C9A84C;color:#071520;">AB</div></div><p class="bpc-name">Aditya Birla Health</p><p class="bpc-type">Insurance Partner</p></div></div>
-            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><img src="images/go-digit.svg" alt="Go Digit" class="bpc-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="bpc-fb" style="background:#0E2A3A;">Digit</div></div><p class="bpc-name">Go Digit</p><p class="bpc-type">Insurance Partner</p></div></div>
+            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><div class="bpc-fb" style="display:flex;background:#1F7A8C;">LIC</div></div><p class="bpc-name">LIC of India</p><p class="bpc-type">Insurance Partner</p></div></div>
+            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><div class="bpc-fb" style="display:flex;background:#0E2A3A;font-size:0.7rem;">SBI Life</div></div><p class="bpc-name">SBI Life Insurance</p><p class="bpc-type">Insurance Partner</p></div></div>
+            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><div class="bpc-fb" style="display:flex;background:#1A3548;font-size:0.65rem;">HDFC Life</div></div><p class="bpc-name">HDFC Life Insurance</p><p class="bpc-type">Insurance Partner</p></div></div>
+            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><div class="bpc-fb" style="display:flex;background:#2FB5C4;color:#071520;font-size:0.7rem;">ICICI</div></div><p class="bpc-name">ICICI Pru Life</p><p class="bpc-type">Insurance Partner</p></div></div>
+            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><div class="bpc-fb" style="display:flex;background:#C9A84C;color:#071520;font-size:0.7rem;">Max</div></div><p class="bpc-name">Max Life Insurance</p><p class="bpc-type">Insurance Partner</p></div></div>
+            <div class="bpc"><div class="bpc-body"><div class="bpc-logo"><div class="bpc-fb" style="display:flex;background:#0E2A3A;font-size:0.65rem;">Bajaj</div></div><p class="bpc-name">Bajaj Allianz Life</p><p class="bpc-type">Insurance Partner</p></div></div>
           </div>
         </div>
         <button class="bparr bparr-next" id="bparr-ins-next" aria-label="Next insurance partners">
@@ -704,9 +598,9 @@
       <div class="bp-trade-wrap">
         <div class="bpc bpc-solo">
           <div class="bpc-body">
-            <div class="bpc-logo bpc-logo-lg"><img src="images/aditya-birla-elevate.svg" alt="Aditya Birla Elevate" class="bpc-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="bpc-fb" style="background:linear-gradient(135deg,#1F7A8C,#2FB5C4);font-size:0.8rem;">AB</div></div>
-            <p class="bpc-name">Aditya Birla Elevate</p>
-            <p class="bpc-type">Trading Platform Partner</p>
+            <div class="bpc-logo bpc-logo-lg"><div class="bpc-fb" style="display:flex;background:linear-gradient(135deg,#1F7A8C,#2FB5C4);font-size:0.8rem;">NSE<br>BSE</div></div>
+            <p class="bpc-name">NSE &amp; BSE</p>
+            <p class="bpc-type">Recognised Stock Exchanges</p>
             <span class="bpc-badge">SEBI Regulated</span>
           </div>
         </div>
@@ -737,75 +631,24 @@
   </div>
 </section>
 
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="images/ElevateWealthServicesLogo.png" alt="Elevate Wealth Services">
-        <p>Your trusted partner for Mutual Fund Advisory, Insurance Solutions, and Trading &amp; Investing Services across India.</p>
-        <address>Cash Dhara Bazar, Near Bawa Lal Mandir,<br>Karmon Deori, Amritsar, Punjab</address>
-        <div class="social-links" aria-label="Social media links">
-          <a href="https://wa.me/919815519057" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.12 1.528 5.856L.057 23.882l6.187-1.622A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.368l-.36-.213-3.672.964.981-3.593-.234-.369A9.818 9.818 0 1112 21.818z"/></svg>
-          </a>
-          <a href="mailto:arvinder@elevatewealthservices.com" class="social-link" aria-label="Email us">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </a>
-        </div>
-      </div>
-      <nav class="footer-col" aria-label="Quick links">
-        <h4>Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Book Consultation</a></li>
-          <li><a href="disclaimer.html">Disclaimer</a></li>
-        </ul>
-      </nav>
-      <nav class="footer-col" aria-label="Our services">
-        <h4>Services</h4>
-        <ul class="footer-links">
-          <li><a href="services.html#mutual-funds">Mutual Fund Advisory</a></li>
-          <li><a href="services.html#insurance">Insurance Solutions</a></li>
-          <li><a href="services.html#trading">Trading &amp; Investing</a></li>
-          <li><a href="contact.html">Free Consultation</a></li>
-        </ul>
-      </nav>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <div class="f-contact-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.34 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <a href="tel:+919815519057">+91 98155 19057</a>
-        </div>
-        <div class="f-contact-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <a href="mailto:arvinder@elevatewealthservices.com">arvinder@elevatewealthservices.com</a>
-        </div>
-        <div class="f-contact-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <address>Cash Dhara Bazar, Near Bawa Lal Mandir, Karmon Deori, Amritsar</address>
-        </div>
-        <div class="f-contact-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <p>Mon&ndash;Fri: 9:30 AM &ndash; 6:30 PM<br>Sat: 10:00 AM &ndash; 4:00 PM</p>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-copyright">&copy; 2026 Elevate Wealth Services. All rights reserved.</p>
-      <div class="footer-badges" aria-label="Regulatory compliance badges">
-        <span class="footer-badge">AMFI Registered</span>
-        <span class="footer-badge">IRDAI Certified</span>
-        <span class="footer-badge">SEBI Compliant</span>
-      </div>
-    </div>
-    <p class="footer-disclaimer">
-      Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Insurance is the subject matter of solicitation. Past performance is not indicative of future results. Elevate Wealth Services is an AMFI Registered Mutual Fund Distributor and IRDAI Licensed Insurance Agent.
-    </p>
-  </div>
-</footer>
+{FOOTER}
 
 <script src="js/script.js"></script>
 </body>
-</html>
+</html>'''
+
+with open(path, 'w', encoding='utf-8') as f:
+    f.write(html)
+
+size = os.path.getsize(path)
+content = open(path, encoding='utf-8').read()
+checks = ['hero-eyebrow', 'logo-showcase', 'bpsec', 'process-timeline', 'why-section', 'navToggle', 'nav-mobile', 'btn-primary', 'credentials-section', 'benefits-grid']
+ok = all(c in content for c in checks)
+old_markers = ['mobile-menu-toggle', 'nav-menu', 'background-color: #ffffff', 'hero-blob']
+old_found = [m for m in old_markers if m in content]
+print(f"index.html written: {size} bytes")
+print(f"All new markers: {'PASS' if ok else 'FAIL'}")
+if old_found:
+    print(f"OLD MARKERS FOUND: {old_found}")
+else:
+    print("No old markers: CLEAN")

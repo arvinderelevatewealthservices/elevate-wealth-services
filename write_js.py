@@ -1,4 +1,6 @@
-/* ═══════════════════════════════════════════════════════
+import os
+path = r'c:\Users\itxul\Desktop\ElevateWealthServices\js\script.js'
+js = r"""/* ═══════════════════════════════════════════════════════
    ELEVATE WEALTH SERVICES — script.js v2.0
    Dark Luxury Fintech Theme
 ═══════════════════════════════════════════════════════ */
@@ -324,121 +326,6 @@
   });
 })();
 
-/* ─── CALCULATORS (SIP + LUMPSUM) ─── */
-(function () {
-  var forms = document.querySelectorAll('.calc-form');
-  if (!forms.length) return;
-
-  var inr = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
-
-  function safeNum(v) {
-    var n = parseFloat(v);
-    return Number.isFinite(n) ? n : NaN;
-  }
-
-  function sipFutureValue(monthly, annualRate, years) {
-    var i = annualRate / 12 / 100;
-    var n = years * 12;
-    if (i === 0) return monthly * n;
-    return monthly * ((Math.pow(1 + i, n) - 1) / i) * (1 + i);
-  }
-
-  function lumpsumFutureValue(principal, annualRate, years) {
-    return principal * Math.pow(1 + annualRate / 100, years);
-  }
-
-  forms.forEach(function (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var mode = form.getAttribute('data-calc');
-
-      if (mode === 'sip') {
-        var monthly = safeNum(form.querySelector('#sipMonthly').value);
-        var rate = safeNum(form.querySelector('#sipReturn').value);
-        var years = safeNum(form.querySelector('#sipYears').value);
-        var out = document.getElementById('sipResult');
-
-        if (!(monthly > 0) || !(rate >= 0) || !(years > 0)) {
-          out.innerHTML = 'Please enter valid SIP inputs.';
-          return;
-        }
-
-        var invested = monthly * years * 12;
-        var future = sipFutureValue(monthly, rate, years);
-        var gains = future - invested;
-
-        out.innerHTML =
-          'Estimated Future Value: <strong>INR ' + inr.format(Math.round(future)) + '</strong><br>' +
-          'Total Invested: INR ' + inr.format(Math.round(invested)) + ' | Estimated Gains: INR ' + inr.format(Math.round(gains));
-      }
-
-      if (mode === 'lumpsum') {
-        var principal = safeNum(form.querySelector('#lumpPrincipal').value);
-        var annualRate = safeNum(form.querySelector('#lumpReturn').value);
-        var duration = safeNum(form.querySelector('#lumpYears').value);
-        var outLump = document.getElementById('lumpsumResult');
-
-        if (!(principal > 0) || !(annualRate >= 0) || !(duration > 0)) {
-          outLump.innerHTML = 'Please enter valid lumpsum inputs.';
-          return;
-        }
-
-        var futureValue = lumpsumFutureValue(principal, annualRate, duration);
-        var growth = futureValue - principal;
-
-        outLump.innerHTML =
-          'Estimated Future Value: <strong>INR ' + inr.format(Math.round(futureValue)) + '</strong><br>' +
-          'Principal: INR ' + inr.format(Math.round(principal)) + ' | Estimated Growth: INR ' + inr.format(Math.round(growth));
-      }
-    });
-  });
-})();
-
-/* ─── FAQ ACCORDION ─── */
-(function () {
-  var questions = document.querySelectorAll('.faq-question');
-  if (!questions.length) return;
-
-  questions.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var expanded = btn.getAttribute('aria-expanded') === 'true';
-      var answer = btn.nextElementSibling;
-
-      btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-      if (!answer) return;
-      answer.style.maxHeight = expanded ? '0px' : answer.scrollHeight + 'px';
-    });
-  });
-})();
-
-/* ─── MYTH VS FACT TABS ─── */
-(function () {
-  var tabs = document.querySelectorAll('.myth-tab');
-  var panels = document.querySelectorAll('.myth-panel');
-  if (!tabs.length || !panels.length) return;
-
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      var target = tab.getAttribute('data-myth-tab');
-
-      tabs.forEach(function (t) {
-        t.classList.remove('active');
-        t.setAttribute('aria-selected', 'false');
-      });
-
-      panels.forEach(function (p) {
-        p.classList.remove('active');
-      });
-
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
-
-      var panel = document.querySelector('.myth-panel[data-myth-panel="' + target + '"]');
-      if (panel) panel.classList.add('active');
-    });
-  });
-})();
-
 /* ─── EXTERNAL LINK SAFETY ─── */
 (function () {
   document.querySelectorAll('a[href^="https://wa.me"], a[href^="tel:"], a[href^="mailto:"]').forEach(function (a) {
@@ -448,3 +335,13 @@
     }
   });
 })();
+"""
+with open(path, 'w', encoding='utf-8') as f:
+    f.write(js)
+size = os.path.getsize(path)
+print(f"JS written: {size} bytes")
+with open(path, 'r', encoding='utf-8') as f:
+    content = f.read()
+checks = ['IntersectionObserver', 'revealObserver', 'BPSlider', 'wa.me', 'animateCounter', 'rippleAnim', 'navToggle']
+for c in checks:
+    print(f"  {c}: {'FOUND' if c in content else 'MISSING'}")

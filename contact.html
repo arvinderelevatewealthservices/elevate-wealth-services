@@ -1,231 +1,264 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>Book a Consultation - ElevateWealthServices</title>
-    <meta name="description" content="Book a free consultation with ElevateWealthServices for mutual fund advisory, insurance solutions, or trading & investing guidance.">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Book a Consultation - ElevateWealthServices">
-    <meta property="og:description" content="Schedule your free consultation for mutual funds, insurance, or trading & investing support.">
-    <meta property="og:url" content="https://elevatewealthservices.com/contact.html">
-    <meta property="og:image" content="https://elevatewealthservices.com/images/og-banner.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Book a Consultation - ElevateWealthServices">
-    <meta name="twitter:description" content="Connect with us for tailored financial guidance across mutual funds, insurance, and trading & investing.">
-    <meta name="twitter:image" content="https://elevatewealthservices.com/images/og-banner.png">
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        @media (max-width: 768px) {
-            h1 { font-size: 1.75rem !important; }
-            h2 { font-size: 1.5rem !important; }
-
-            div[style*="grid-template-columns: 1fr 1fr"] {
-                grid-template-columns: 1fr !important;
-            }
-        }
-        
-        @media (max-width: 640px) {
-            h1 { font-size: 1.5rem !important; }
-            h2 { font-size: 1.25rem !important; }
-
-            div[style*="grid-template-columns: 1fr 1fr"] {
-                grid-template-columns: 1fr !important;
-            }
-
-            section { padding: 2rem 1rem !important; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Contact Us — Elevate Wealth Services</title>
+  <meta name="description" content="Book a free financial consultation with Elevate Wealth Services. Contact us for Mutual Fund Advisory, Insurance, or Trading support in Amritsar.">
+  <meta property="og:title" content="Contact Us — Elevate Wealth Services">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elevatewealthservices.com/contact.html">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Premium Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="images/ElevateWealthServicesLogo.png" alt="ElevateWealthServices">
-            </a>
-            <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html" class="nav-cta">Book a Consultation</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section style="padding: 3rem 1rem; background: linear-gradient(to bottom right, #f0f9ff, #eff6ff, white);">
-        <div class="max-w-4xl" style="text-align: center;">
-            <h1 style="font-size: 2.25rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">Book Your Free Consultation</h1>
-            <p style="font-size: 1rem; color: #4b5563; line-height: 1.6;">Ready to take control of your financial future? Schedule a free, no-obligation session with our experts today.</p>
-        </div>
-    </section>
+<!-- NAVIGATION -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Elevate Wealth Services — Home">
+      <img src="images/ElevateWealthServicesLogo.png" alt="Elevate Wealth Services">
+    </a>
+    <ul class="nav-links" role="menubar">
+      <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+      <li role="none"><a href="about.html" role="menuitem">About</a></li>
+      <li role="none"><a href="services.html" role="menuitem">Services</a></li>
+      <li role="none"><a href="contact.html" class="nav-cta-btn" role="menuitem">Book a Consultation</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMobile">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
 
-    <!-- Contact Form & Info -->
-    <section style="padding: 3rem 1rem; background: white;">
-        <div class="max-w-7xl">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;">
-                <!-- Contact Form -->
-                <div style="background: white; border-radius: 1rem; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); padding: 1.5rem; border: 1px solid #e5e7eb;">
-                    <h2 style="font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 0.5rem;">Book Your Free Consultation</h2>
-                    <p style="color: #4b5563; margin-bottom: 1.5rem;">Fill in your details below and continue on WhatsApp to submit your consultation request.</p>
+<!-- MOBILE NAVIGATION OVERLAY -->
+<div class="nav-mobile" id="navMobile" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <button class="nav-mobile-close" id="navMobileClose" aria-label="Close navigation">&#x2715;</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html" class="mobile-cta">Book a Consultation</a>
+</div>
 
-                    <form id="contactForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
-                        <div>
-                            <label for="name" style="display: block; font-size: 0.875rem; font-weight: 600; color: #374151; margin-bottom: 0.5rem;">Full Name *</label>
-                            <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; font-family: inherit; font-size: 1rem; transition: border-color 0.3s ease;" placeholder="Enter your full name">
-                        </div>
+<!-- ═══════════════════════════════════════
+     PAGE HERO
+═══════════════════════════════════════ -->
+<section class="page-hero" aria-label="Contact page hero">
+  <div class="page-hero-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+  <div class="page-hero-grid" aria-hidden="true"></div>
+  <div class="page-hero-content">
+    <span class="section-label">Get In Touch</span>
+    <h1>Book a Free<br><span class="gradient-text">Consultation</span></h1>
+    <p>A 30-minute conversation could be the first step toward complete financial clarity. No obligation, no pressure — just honest, expert guidance.</p>
+  </div>
+</section>
 
-                        <div>
-                            <label for="phone" style="display: block; font-size: 0.875rem; font-weight: 600; color: #374151; margin-bottom: 0.5rem;">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; font-family: inherit; font-size: 1rem; transition: border-color 0.3s ease;" placeholder="+91 98155 19057">
-                        </div>
+<!-- ═══════════════════════════════════════
+     CONTACT SECTION
+═══════════════════════════════════════ -->
+<section class="contact-section section-pad" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-grid">
 
-                        <div>
-                            <label for="email" style="display: block; font-size: 0.875rem; font-weight: 600; color: #374151; margin-bottom: 0.5rem;">Email Address</label>
-                            <input type="email" id="email" name="email" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; font-family: inherit; font-size: 1rem; transition: border-color 0.3s ease;" placeholder="your@email.com">
-                        </div>
-
-                        <div>
-                            <label for="service" style="display: block; font-size: 0.875rem; font-weight: 600; color: #374151; margin-bottom: 0.5rem;">Service Interested In *</label>
-                            <select id="service" name="service" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; font-family: inherit; font-size: 1rem;">
-                                <option value="">Select a service</option>
-                                <option value="mutual-funds">Mutual Fund Advisory</option>
-                                <option value="insurance">Insurance Solutions</option>
-                                <option value="trading">Trading & Investing</option>
-                                <option value="all">All Services / General Consultation</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="message" style="display: block; font-size: 0.875rem; font-weight: 600; color: #374151; margin-bottom: 0.5rem;">Message (Optional)</label>
-                            <textarea id="message" name="message" rows="4" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; font-family: inherit; font-size: 1rem; resize: vertical;" placeholder="Tell us about your financial goals..."></textarea>
-                        </div>
-
-                        <button type="submit" style="width: 100%; background: linear-gradient(to right, #0284c7, #0369a1); color: white; padding: 1rem 1.5rem; border-radius: 0.5rem; font-weight: 600; font-size: 1.125rem; border: none; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                            <span>Continue on WhatsApp</span>
-                        </button>
-
-                        <p style="font-size: 0.875rem; color: #6b7280; text-align: center;">By continuing, you'll open WhatsApp with a pre-filled professional message including your details. We'll never share your information.</p>
-                    </form>
-                </div>
-
-                <!-- Contact Information -->
-                <div style="display: flex; flex-direction: column; gap: 2rem;">
-                    <div>
-                        <h2 style="font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">Get In Touch</h2>
-                        <p style="color: #4b5563; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem;">Have questions? Reach out to us through any of these channels. We're here to help you make informed financial decisions.</p>
-                    </div>
-
-                    <div style="display: flex; align-items: flex-start; gap: 1rem; padding: 1.5rem; background: linear-gradient(to bottom right, #eff6ff, #dbeafe); border-radius: 0.75rem;">
-                        <span style="font-size: 1.5rem; flex-shrink: 0; margin-top: 0.25rem;">📞</span>
-                        <div>
-                            <h3 style="font-weight: 600; color: #111827; margin-bottom: 0.25rem;">Phone</h3>
-                            <a href="tel:+919815519057" style="color: #0284c7; text-decoration: none; font-weight: 500; font-size: 1.125rem;">+91 98155 19057</a>
-                            <p style="font-size: 0.875rem; color: #4b5563; margin-top: 0.25rem;">Available: Mon-Sat, 9:30 AM - 6:30 PM</p>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; align-items: flex-start; gap: 1rem; padding: 1.5rem; background: linear-gradient(to bottom right, #f0fdf4, #dcfce7); border-radius: 0.75rem;">
-                        <span style="font-size: 1.5rem; flex-shrink: 0; margin-top: 0.25rem;">📧</span>
-                        <div>
-                            <h3 style="font-weight: 600; color: #111827; margin-bottom: 0.25rem;">Email</h3>
-                            <a href="mailto:arvinder@elevatewealthservices.com" style="color: #16a34a; text-decoration: none; font-weight: 500; word-break: break-all;">arvinder@elevatewealthservices.com</a>
-                            <p style="font-size: 0.875rem; color: #4b5563; margin-top: 0.25rem;">We'll respond within 24 hours</p>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; align-items: flex-start; gap: 1rem; padding: 1.5rem; background: linear-gradient(to bottom right, #f3e8ff, #ede9fe); border-radius: 0.75rem;">
-                        <span style="font-size: 1.5rem; flex-shrink: 0; margin-top: 0.25rem;">📍</span>
-                        <div>
-                            <h3 style="font-weight: 600; color: #111827; margin-bottom: 0.25rem;">Office Address</h3>
-                            <p style="color: #374151;">ElevateWealthServices<br>Cash Dhara Bazar, Near Bawa Lal Mandir<br>Karmon Deori, Amritsar</p>
-                            <p style="font-size: 0.875rem; color: #4b5563; margin-top: 0.5rem;">Walk-ins welcome during business hours</p>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; align-items: flex-start; gap: 1rem; padding: 1.5rem; background: linear-gradient(to bottom right, #fed7aa, #fdba74); border-radius: 0.75rem;">
-                        <span style="font-size: 1.5rem; flex-shrink: 0; margin-top: 0.25rem;">🕒</span>
-                        <div>
-                            <h3 style="font-weight: 600; color: #111827; margin-bottom: 0.25rem;">Business Hours</h3>
-                            <p style="color: #374151;">
-                                <strong>Monday - Friday:</strong> 9:30 AM - 6:30 PM<br>
-                                <strong>Saturday:</strong> 10:00 AM - 4:00 PM<br>
-                                <strong>Sunday:</strong> Closed
-                            </p>
-                        </div>
-                    </div>
-
-
-                </div>
+      <!-- Form -->
+      <div class="contact-form-wrap reveal-left">
+        <h2 id="contact-heading">Send Us a Message</h2>
+        <p class="contact-form-sub">We will get back to you via WhatsApp within 24 hours.</p>
+        <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="name">Full Name <span aria-hidden="true">*</span></label>
+              <input class="form-input" id="name" name="name" type="text" placeholder="Your Full Name" required autocomplete="name" aria-required="true">
+              <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
             </div>
-        </div>
-    </section>
-
-    <!-- In-Person Visit CTA -->
-    <section style="padding: 3rem 1rem; background: #f9fafb;">
-        <div class="max-w-7xl">
-            <div style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); text-align: center;">
-                <h2 style="font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Prefer to Visit Us in Person?</h2>
-                <p style="color: #4b5563; font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 48rem; margin-left: auto; margin-right: auto;">Our office in Amritsar is open for consultations. Schedule an appointment or drop by during business hours. We'd love to meet you!</p>
-                <a href="tel:+919815519057" style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(to right, #0284c7, #0369a1); color: white; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: 600; font-size: 1.125rem; text-decoration: none; transition: all 0.3s ease;">
-                    <span>📞</span>
-                    <span>Call to Schedule Visit</span>
-                </a>
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone Number <span aria-hidden="true">*</span></label>
+              <input class="form-input" id="phone" name="phone" type="tel" placeholder="+91 98XXX XXXXX" required autocomplete="tel" aria-required="true">
+              <span class="form-error" id="phoneError" role="alert" aria-live="polite"></span>
             </div>
-        </div>
-    </section>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input class="form-input" id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="service">Service Interested In <span aria-hidden="true">*</span></label>
+            <select class="form-select" id="service" name="service" required aria-required="true">
+              <option value="">Select a service...</option>
+              <option value="mutual-funds">Mutual Fund Advisory</option>
+              <option value="insurance">Insurance Solutions</option>
+              <option value="trading">Trading &amp; Investing</option>
+              <option value="general">General Enquiry</option>
+            </select>
+            <span class="form-error" id="serviceError" role="alert" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-textarea" id="message" name="message" rows="4" placeholder="Tell us about your financial goals or questions..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg wa-btn-full" aria-label="Send via WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.12 1.528 5.856L.057 23.882l6.187-1.622A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.368l-.36-.213-3.672.964.981-3.593-.234-.369A9.818 9.818 0 1112 21.818z"/></svg>
+            Send via WhatsApp
+          </button>
+        </form>
+      </div>
 
-    <!-- Footer -->
-    <footer style="background: linear-gradient(to bottom right, #1f2937, #111827); color: #d1d5db;">
-        <div class="max-w-7xl" style="padding: 2.5rem 1rem;">
-            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
-                <!-- Company Info -->
-                <div class="footer-section">
-                    <div style="display: flex; align-items: center; gap: 0.4rem; margin-bottom: 1rem;">
-                        <img src="images/ElevateWealthServicesLogo.png" alt="ElevateWealthServices" style="height: 2.5rem; width: auto; object-fit: contain;">
-                    </div>
-                    <p style="color: #9ca3af; font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.75rem;">Your trusted partner for Mutual Fund Advisory, Insurance Solutions, and Trading Services.</p>
-                    <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem;">
-                        <span>📍</span>
-                        <span>Cash Dhara Bazar, Near Bawa Lal Mandir, Karmon Deori, Amritsar</span>
-                    </div>
-                </div>
+      <!-- Contact Info -->
+      <div class="contact-info-wrap reveal-right">
+        <div class="contact-card">
+          <h3>Contact Information</h3>
 
-                <!-- Quick Links -->
-                <div class="footer-section">
-                    <h3 style="color: white; font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">Quick Links</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                        <li><a href="index.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">Home</a></li>
-                        <li><a href="about.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">About Us</a></li>
-                        <li><a href="services.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">Services</a></li>
-                        <li><a href="contact.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">Book</a></li>
-                    </ul>
-                </div>
-
-                <!-- Services -->
-                <div class="footer-section">
-                    <h3 style="color: white; font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">Services</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                        <li style="font-size: 0.85rem; color: #d1d5db;">Mutual Funds</li>
-                        <li style="font-size: 0.85rem; color: #d1d5db;">Life Insurance</li>
-                        <li style="font-size: 0.85rem; color: #d1d5db;">Health Insurance</li>
-                        <li style="font-size: 0.85rem; color: #d1d5db;">Trading & Investing</li>
-                    </ul>
-                </div>
+          <div class="contact-info-item">
+            <div class="ci-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.34 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
-
-            <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 1.5rem;">
-                <p style="font-size: 0.8rem; color: #9ca3af; text-align: center; margin: 0;">© 2026 ElevateWealthServices. All rights reserved.</p>
+            <div>
+              <span class="ci-label">Phone</span>
+              <a href="tel:+919815519057" class="ci-value">+91 98155 19057</a>
             </div>
-        </div>
-    </footer>
+          </div>
 
-    <script src="js/script.js"></script>
+          <div class="contact-info-item">
+            <div class="ci-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.12 1.528 5.856L.057 23.882l6.187-1.622A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.368l-.36-.213-3.672.964.981-3.593-.234-.369A9.818 9.818 0 1112 21.818z"/></svg>
+            </div>
+            <div>
+              <span class="ci-label">WhatsApp</span>
+              <a href="https://wa.me/919815519057" target="_blank" rel="noopener noreferrer" class="ci-value">+91 98155 19057</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="ci-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <span class="ci-label">Email</span>
+              <a href="mailto:arvinder@elevatewealthservices.com" class="ci-value">arvinder@elevatewealthservices.com</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="ci-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <span class="ci-label">Office</span>
+              <address class="ci-value">Cash Dhara Bazar, Near Bawa Lal Mandir,<br>Karmon Deori, Amritsar, Punjab</address>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="ci-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <span class="ci-label">Business Hours</span>
+              <p class="ci-value">Mon – Fri: 9:30 AM – 6:30 PM<br>Saturday: 10:00 AM – 4:00 PM<br>Sunday: Closed</p>
+            </div>
+          </div>
+
+          <a href="https://wa.me/919815519057" class="wa-direct-btn btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Start WhatsApp chat directly">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.12 1.528 5.856L.057 23.882l6.187-1.622A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.368l-.36-.213-3.672.964.981-3.593-.234-.369A9.818 9.818 0 1112 21.818z"/></svg>
+            Chat Directly on WhatsApp
+          </a>
+        </div>
+
+        <!-- Credentials mini-strip -->
+        <div class="contact-creds" aria-label="Our credentials">
+          <div class="cc-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            AMFI Registered
+          </div>
+          <div class="cc-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            IRDAI Certified
+          </div>
+          <div class="cc-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="6" height="18" rx="1"/><rect x="9" y="8" width="6" height="13" rx="1"/><rect x="16" y="13" width="6" height="8" rx="1"/></svg>
+            SEBI Compliant
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/ElevateWealthServicesLogo.png" alt="Elevate Wealth Services">
+        <p>Your trusted partner for Mutual Fund Advisory, Insurance Solutions, and Trading &amp; Investing Services across India.</p>
+        <address>Cash Dhara Bazar, Near Bawa Lal Mandir,<br>Karmon Deori, Amritsar, Punjab</address>
+        <div class="social-links" aria-label="Social media links">
+          <a href="https://wa.me/919815519057" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.12 1.528 5.856L.057 23.882l6.187-1.622A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.368l-.36-.213-3.672.964.981-3.593-.234-.369A9.818 9.818 0 1112 21.818z"/></svg>
+          </a>
+          <a href="mailto:arvinder@elevatewealthservices.com" class="social-link" aria-label="Email us">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Quick links">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Book Consultation</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Our services">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="services.html#mutual-funds">Mutual Fund Advisory</a></li>
+          <li><a href="services.html#insurance">Insurance Solutions</a></li>
+          <li><a href="services.html#trading">Trading &amp; Investing</a></li>
+          <li><a href="contact.html">Free Consultation</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="f-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.34 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+919815519057">+91 98155 19057</a>
+        </div>
+        <div class="f-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:arvinder@elevatewealthservices.com">arvinder@elevatewealthservices.com</a>
+        </div>
+        <div class="f-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <address>Cash Dhara Bazar, Near Bawa Lal Mandir, Karmon Deori, Amritsar</address>
+        </div>
+        <div class="f-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <p>Mon–Fri: 9:30 AM – 6:30 PM<br>Sat: 10:00 AM – 4:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Elevate Wealth Services. All rights reserved.</p>
+      <div class="footer-badges" aria-label="Regulatory compliance badges">
+        <span class="footer-badge">AMFI Registered</span>
+        <span class="footer-badge">IRDAI Certified</span>
+        <span class="footer-badge">SEBI Compliant</span>
+      </div>
+    </div>
+    <p class="footer-disclaimer">
+      Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Insurance is the subject matter of solicitation. Past performance is not indicative of future results. Elevate Wealth Services is an AMFI Registered Mutual Fund Distributor and IRDAI Licensed Insurance Agent.
+    </p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
