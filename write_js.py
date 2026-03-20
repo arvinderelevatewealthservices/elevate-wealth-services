@@ -1,4 +1,6 @@
-/* ═══════════════════════════════════════════════════════
+import os
+path = r'c:\Users\itxul\Desktop\ElevateWealthServices\js\script.js'
+js = r"""/* ═══════════════════════════════════════════════════════
    ELEVATE WEALTH SERVICES — script.js v2.0
    Dark Luxury Fintech Theme
 ═══════════════════════════════════════════════════════ */
@@ -225,7 +227,88 @@
   });
 })();
 
-/* ─── BRAND PARTNER TABS (marquee redesign) ─── */
+/* ─── BRAND PARTNERS SLIDER ─── */
+(function () {
+  function getVis() {
+    return window.innerWidth >= 1024 ? 4 : window.innerWidth >= 640 ? 2 : 1;
+  }
+
+  function BPSlider(trackId, wrapId, prevId, nextId, dotsId) {
+    var track  = document.getElementById(trackId);
+    var wrap   = document.getElementById(wrapId);
+    var prevBtn = document.getElementById(prevId);
+    var nextBtn = document.getElementById(nextId);
+    var dotsEl = document.getElementById(dotsId);
+    if (!track || !wrap) return;
+
+    var idx   = 0;
+    var timer = null;
+    var total = track.children.length;
+
+    function maxIdx() { return Math.max(0, total - getVis()); }
+
+    function buildDots() {
+      if (!dotsEl) return;
+      dotsEl.innerHTML = '';
+      var count = maxIdx() + 1;
+      for (var i = 0; i < count; i++) {
+        var d = document.createElement('button');
+        d.className = 'bp-dot' + (i === idx ? ' active' : '');
+        d.setAttribute('aria-label', 'Slide ' + (i + 1));
+        (function (n) {
+          d.addEventListener('click', function () { go(n); resetTimer(); });
+        })(i);
+        dotsEl.appendChild(d);
+      }
+    }
+
+    function update() {
+      var vis  = getVis();
+      var cardW = wrap.offsetWidth / vis;
+      var offset = -(idx * cardW);
+      track.style.transform = 'translateX(' + offset + 'px)';
+      if (dotsEl) {
+        dotsEl.querySelectorAll('.bp-dot').forEach(function (d, i) {
+          d.classList.toggle('active', i === idx);
+        });
+      }
+      if (prevBtn) prevBtn.disabled = idx === 0;
+      if (nextBtn) nextBtn.disabled = idx >= maxIdx();
+    }
+
+    function go(n) {
+      idx = Math.max(0, Math.min(n, maxIdx()));
+      update();
+    }
+
+    function next() { go(idx < maxIdx() ? idx + 1 : 0); }
+    function prev() { go(idx > 0 ? idx - 1 : maxIdx()); }
+
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(next, 4200);
+    }
+
+    if (nextBtn) nextBtn.addEventListener('click', function () { next(); resetTimer(); });
+    if (prevBtn) prevBtn.addEventListener('click', function () { prev(); resetTimer(); });
+
+    buildDots();
+    update();
+    resetTimer();
+
+    window.addEventListener('resize', function () {
+      buildDots();
+      go(Math.min(idx, maxIdx()));
+    }, { passive: true });
+  }
+
+  /* Mutual Funds slider */
+  BPSlider('bpst-mf',  'bpsw-mf',  'bparr-mf-prev',  'bparr-mf-next',  'bpdots-mf');
+  /* Insurance slider */
+  BPSlider('bpst-ins', 'bpsw-ins', 'bparr-ins-prev', 'bparr-ins-next', 'bpdots-ins');
+})();
+
+/* ─── BRAND PARTNER TABS ─── */
 (function () {
   var tabs   = document.querySelectorAll('.bp-tab');
   var panels = document.querySelectorAll('.bp-panel');
@@ -234,161 +317,10 @@
   tabs.forEach(function (tab) {
     tab.addEventListener('click', function () {
       var target = tab.getAttribute('data-tab');
-      tabs.forEach(function (t) {
-        t.classList.remove('active');
-        t.setAttribute('aria-selected', 'false');
-      });
+      tabs.forEach(function (t) { t.classList.remove('active'); });
       panels.forEach(function (p) { p.classList.remove('active'); });
       tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
       var panel = document.getElementById('bpp-' + target);
-      if (panel) panel.classList.add('active');
-    });
-  });
-})();
-
-/* ─── KNOWLEDGE HUB FILTER ─── */
-(function () {
-  var kfTabs    = document.querySelectorAll('.kf-tab');
-  var kCards    = document.querySelectorAll('.knowledge-card');
-  var noResults = document.getElementById('knowledgeNoResults');
-  if (!kfTabs.length) return;
-
-  kfTabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      kfTabs.forEach(function (t) {
-        t.classList.remove('active');
-        t.setAttribute('aria-selected', 'false');
-      });
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
-
-      var filter  = tab.dataset.filter;
-      var visible = 0;
-
-      kCards.forEach(function (card) {
-        var match = filter === 'all' || card.dataset.category === filter;
-        card.classList.toggle('knowledge-card-hidden', !match);
-        if (match) visible++;
-      });
-
-      if (noResults) {
-        noResults.style.display = visible === 0 ? 'block' : 'none';
-      }
-    });
-  });
-})();
-
-/* ─── CALCULATORS (SIP + LUMPSUM) ─── */
-(function () {
-  var forms = document.querySelectorAll('.calc-form');
-  if (!forms.length) return;
-
-  var inr = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
-
-  function safeNum(v) {
-    var n = parseFloat(v);
-    return Number.isFinite(n) ? n : NaN;
-  }
-
-  function sipFutureValue(monthly, annualRate, years) {
-    var i = annualRate / 12 / 100;
-    var n = years * 12;
-    if (i === 0) return monthly * n;
-    return monthly * ((Math.pow(1 + i, n) - 1) / i) * (1 + i);
-  }
-
-  function lumpsumFutureValue(principal, annualRate, years) {
-    return principal * Math.pow(1 + annualRate / 100, years);
-  }
-
-  forms.forEach(function (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var mode = form.getAttribute('data-calc');
-
-      if (mode === 'sip') {
-        var monthly = safeNum(form.querySelector('#sipMonthly').value);
-        var rate = safeNum(form.querySelector('#sipReturn').value);
-        var years = safeNum(form.querySelector('#sipYears').value);
-        var out = document.getElementById('sipResult');
-
-        if (!(monthly > 0) || !(rate >= 0) || !(years > 0)) {
-          out.innerHTML = 'Please enter valid SIP inputs.';
-          return;
-        }
-
-        var invested = monthly * years * 12;
-        var future = sipFutureValue(monthly, rate, years);
-        var gains = future - invested;
-
-        out.innerHTML =
-          'Estimated Future Value: <strong>INR ' + inr.format(Math.round(future)) + '</strong><br>' +
-          'Total Invested: INR ' + inr.format(Math.round(invested)) + ' | Estimated Gains: INR ' + inr.format(Math.round(gains));
-      }
-
-      if (mode === 'lumpsum') {
-        var principal = safeNum(form.querySelector('#lumpPrincipal').value);
-        var annualRate = safeNum(form.querySelector('#lumpReturn').value);
-        var duration = safeNum(form.querySelector('#lumpYears').value);
-        var outLump = document.getElementById('lumpsumResult');
-
-        if (!(principal > 0) || !(annualRate >= 0) || !(duration > 0)) {
-          outLump.innerHTML = 'Please enter valid lumpsum inputs.';
-          return;
-        }
-
-        var futureValue = lumpsumFutureValue(principal, annualRate, duration);
-        var growth = futureValue - principal;
-
-        outLump.innerHTML =
-          'Estimated Future Value: <strong>INR ' + inr.format(Math.round(futureValue)) + '</strong><br>' +
-          'Principal: INR ' + inr.format(Math.round(principal)) + ' | Estimated Growth: INR ' + inr.format(Math.round(growth));
-      }
-    });
-  });
-})();
-
-/* ─── FAQ ACCORDION ─── */
-(function () {
-  var questions = document.querySelectorAll('.faq-question');
-  if (!questions.length) return;
-
-  questions.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var expanded = btn.getAttribute('aria-expanded') === 'true';
-      var answer = btn.nextElementSibling;
-
-      btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-      if (!answer) return;
-      answer.style.maxHeight = expanded ? '0px' : answer.scrollHeight + 'px';
-    });
-  });
-})();
-
-/* ─── MYTH VS FACT TABS ─── */
-(function () {
-  var tabs = document.querySelectorAll('.myth-tab');
-  var panels = document.querySelectorAll('.myth-panel');
-  if (!tabs.length || !panels.length) return;
-
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      var target = tab.getAttribute('data-myth-tab');
-
-      tabs.forEach(function (t) {
-        t.classList.remove('active');
-        t.setAttribute('aria-selected', 'false');
-      });
-
-      panels.forEach(function (p) {
-        p.classList.remove('active');
-      });
-
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
-
-      var panel = document.querySelector('.myth-panel[data-myth-panel="' + target + '"]');
       if (panel) panel.classList.add('active');
     });
   });
@@ -403,3 +335,13 @@
     }
   });
 })();
+"""
+with open(path, 'w', encoding='utf-8') as f:
+    f.write(js)
+size = os.path.getsize(path)
+print(f"JS written: {size} bytes")
+with open(path, 'r', encoding='utf-8') as f:
+    content = f.read()
+checks = ['IntersectionObserver', 'revealObserver', 'BPSlider', 'wa.me', 'animateCounter', 'rippleAnim', 'navToggle']
+for c in checks:
+    print(f"  {c}: {'FOUND' if c in content else 'MISSING'}")

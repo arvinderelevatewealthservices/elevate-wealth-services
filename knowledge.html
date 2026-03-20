@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Knowledge Hub — Elevate Wealth Services</title>
+  <meta name="description" content="Financial literacy resources, guides, and articles on mutual funds, insurance, tax planning, stock markets, and wealth management from Elevate Wealth Services.">
+  <meta property="og:title" content="Knowledge Hub — Elevate Wealth Services">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elevatewealthservices.com/knowledge.html">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Elevate Wealth Services — Home">
+      <img src="images/ElevateWealthServicesLogo.png" alt="Elevate Wealth Services">
+    </a>
+    <ul class="nav-links" role="menubar">
+      <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+      <li role="none"><a href="about.html" role="menuitem">About</a></li>
+      <li role="none"><a href="services.html" role="menuitem">Services</a></li>
+      <li role="none"><a href="knowledge.html" class="nav-active" role="menuitem">Knowledge Hub</a></li>
+      <li role="none"><a href="contact.html" class="nav-cta-btn" role="menuitem">Book a Consultation</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMobile">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE NAVIGATION OVERLAY -->
+<div class="nav-mobile" id="navMobile" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <button class="nav-mobile-close" id="navMobileClose" aria-label="Close navigation">&#x2715;</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="knowledge.html" class="nav-active-mobile">Knowledge Hub</a>
+  <a href="contact.html" class="mobile-cta">Book a Consultation</a>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PAGE HERO
+═══════════════════════════════════════ -->
+<section class="page-hero knowledge-hero" aria-label="Knowledge Hub hero">
+  <div class="page-hero-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+  <div class="page-hero-grid" aria-hidden="true"></div>
+  <div class="page-hero-inner reveal">
+    <span class="section-label">Learn &amp; Grow</span>
+    <h1 id="knowledge-hero-heading">Knowledge <span class="gradient-text">Hub</span></h1>
+    <p>Financial literacy is the foundation of confident investing. Explore our curated guides and expert articles across mutual funds, insurance, tax planning, equity markets, and more.</p>
+    <div class="knowledge-hero-stats" aria-label="Hub statistics">
+      <div class="kh-stat">
+        <span class="kh-stat-num gradient-text">14+</span>
+        <span class="kh-stat-label">Guides &amp; Articles</span>
+      </div>
+      <div class="kh-stat-sep" aria-hidden="true"></div>
+      <div class="kh-stat">
+        <span class="kh-stat-num gradient-text">7</span>
+        <span class="kh-stat-label">Topic Categories</span>
+      </div>
+      <div class="kh-stat-sep" aria-hidden="true"></div>
+      <div class="kh-stat">
+        <span class="kh-stat-num gradient-text">Free</span>
+        <span class="kh-stat-label">Always Free to Read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     KNOWLEDGE HUB MAIN CONTENT
+═══════════════════════════════════════ -->
+<section class="knowledge-section section-pad" aria-labelledby="knowledge-section-heading">
+  <div class="container">
+
+    <!-- Category Filter Tabs -->
+    <div class="knowledge-filter-tabs" role="tablist" aria-label="Filter articles by category">
+      <button class="kf-tab active" data-filter="all" role="tab" aria-selected="true">All Articles</button>
+      <button class="kf-tab" data-filter="mutual-funds" role="tab" aria-selected="false">Mutual Funds</button>
+      <button class="kf-tab" data-filter="insurance" role="tab" aria-selected="false">Insurance</button>
+      <button class="kf-tab" data-filter="tax-planning" role="tab" aria-selected="false">Tax Planning</button>
+      <button class="kf-tab" data-filter="market-literacy" role="tab" aria-selected="false">Market Literacy</button>
+      <button class="kf-tab" data-filter="portfolio-strategy" role="tab" aria-selected="false">Portfolio Strategy</button>
+      <button class="kf-tab" data-filter="risk-management" role="tab" aria-selected="false">Risk Management</button>
+    </div>
+
+    <!-- Articles Grid -->
+    <div class="knowledge-grid" id="knowledgeGrid" role="list">
+
+      <!-- 1 -->
+      <article class="knowledge-card reveal d-1" data-category="mutual-funds" role="listitem" aria-label="SIP vs Lumpsum article">
+        <span class="knowledge-category">Mutual Funds</span>
+        <h3>SIP vs Lumpsum: Which Strategy Fits Your Goals?</h3>
+        <p>Understand the mechanics of Systematic Investment Plans and lumpsum investments — and how to choose the right strategy for your timeline and risk tolerance. SIPs bring discipline and rupee-cost averaging, while lumpsum investing can harness market dips effectively.</p>
+        <div class="knowledge-card-footer">
+          <a href="contact.html" class="kc-read-link">Talk to an Advisor <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="knowledge-card reveal d-2" data-category="tax-planning" role="listitem" aria-label="ELSS and tax planning article">
+        <span class="knowledge-category">Tax Planning</span>
+        <h3>ELSS &amp; Section 80C: Build Wealth Tax-Efficiently</h3>
+        <p>Leverage tax-saving mutual funds (ELSS) under Section 80C to reduce your tax burden while building a long-term investment habit. With the lowest lock-in period among 80C options (3 years), ELSS offers both savings and equity-linked returns.</p>
+        <div class="knowledge-card-footer">
+          <a href="contact.html" class="kc-read-link">Talk to an Advisor <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="knowledge-card reveal d-3" data-category="insurance" role="listitem" aria-label="Term vs Whole Life insurance article">
+        <span class="knowledge-category">Insurance</span>
+        <h3>Life Insurance Fundamentals: Term vs Whole Life</h3>
+        <p>Protection comes in many forms. Learn why term insurance offers pure, cost-effective coverage, and when whole life or ULIPs might serve your protection and wealth goals. Choosing wrongly can leave critical gaps in your financial plan.</p>
+        <div class="knowledge-card-footer">
+          <a href="contact.html" class="kc-read-link">Talk to an Advisor <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="knowledge-card reveal d-4" data-category="market-literacy" role="listitem" aria-label="Stock market basics article">
+        <span class="knowledge-category">Market Literacy</span>
+        <h3>Stock Market Basics: Beyond the Noise</h3>
+        <p>Markets reward patience and discipline. Discover how to think like a long-term investor — avoiding emotional decisions and focusing on fundamental value rather than daily price movements and media narratives.</p>
+        <div class="knowledge-card-footer">
+          <a href="contact.html" class="kc-read-link">Talk to an Advisor <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="knowledge-card reveal d-5" data-category="portfolio-strategy" role="listitem" aria-label="Asset allocation article">
+        <span class="knowledge-category">Portfolio Strategy</span>
+        <h3>Asset Allocation: The Foundation of Wealth</h3>
+        <p>Don't put all eggs in one basket. Explore how to build a balanced portfolio across equities, debt, gold, and alternative investments suited to your risk profile, age, and financial objectives.</p>
+        <div class="knowledge-card-footer">
+          <a href="contact.html" class="kc-read-link">Talk to an Advisor <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="knowledge-card reveal d-6" data-category="risk-management" role="listitem" aria-label="Understanding risk article">
+        <span class="knowledge-category">Risk Management</span>
+        <h3>Understanding Risk: Build Confidence in Investing</h3>
+        <p>Every investor needs a clear risk tolerance. Learn how to assess your risk profile, understand volatility, and craft a strategy you can stay committed to — especially during market downturns.</p>
+        <div class="knowledge-card-footer">
+          <a href="contact.html" class="kc-read-link">Talk to an Advisor <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+
+      <!-- 7 -->
+      <article class="knowledge-card reveal d-1" data-category="mutual-funds" role="listitem" aria-label="How to read a fund factsheet article">
+        <span class="knowledge-category">Mutual Funds</span>
+        <h3>How to Read a Mutual Fund Factsheet</h3>
+        <p>A fund factsheet tells you everything you need to know before investing — expense ratio, portfolio holdings, fund manager's track record, NAV history, and benchmark comparison. Here's how to decode it like a professional.</p>
+        <div class="knowledge-card-footer">
+          <a href="contact.html" class="kc-read-link">Talk to an Advisor <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+
+      <!-- 8 -->
+      <article class="knowledge-card reveal d-2" data-category="insurance" role="listitem" aria-label="Life insurance need calculation article">
+        <span class="knowledge-category">Insurance</span>
+        <h3>How to Calculate Your Life Insurance Need</h3>
+        <p>Most people are either under-insured or over-insured because they never calculated the right coverage amount. Use the Human Life Value (HLV) method or Income Replacement method to find your ideal sum assured.</p>
+        <div class="knowledge-card-footer">
+          <a href="contact.html" class="kc-read-link">Talk to an Advisor <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+
+      <!-- 9 -->
+      <article class="knowledge-card reveal d-3" data-category="market-literacy" role="listitem" aria-label="P/E ratio explanation article">
+        <span class="knowledge-category">Market Literacy</span>
+        <h3>What is a P/E Ratio? A Beginner's Guide</h3>
+        <p>The Price-to-Earnings ratio is one of the most used valuation metrics in equity investing. Learn what it tells you about a stock's valuation, how to compare it against peers, and when a low P/E doesn't always mean a bargain.</p>
+        <div class="knowledge-card-footer">
+          <a href="contact.html" class="kc-read-link">Talk to an Advisor <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+
+      <!-- 10 -->
+      <article class="knowledge-card reveal d-4" data-category="tax-planning" role="listitem" aria-label="New vs Old tax regime article">
+        <span class="knowledge-category">Tax Planning</span>
+        <h3>New vs Old Tax Regime: Which Suits You?</h3>
+        <p>Since AY 2024-25, the new tax regime is the default option for most taxpayers. But choosing depends on your deductions, exemptions, and HRA claims. This guide helps you calculate which saves you more money.</p>
+        <div class="knowledge-card-footer">
+          <a href="contact.html" class="kc-read-link">Talk to an Advisor <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+
+      <!-- 11 -->
+      <article class="knowledge-card reveal d-5" data-category="portfolio-strategy" role="listitem" aria-label="Portfolio rebalancing article">
+        <span class="knowledge-category">Portfolio Strategy</span>
+        <h3>Rebalancing Your Portfolio: When and How</h3>
+        <p>Over time, market movements skew your intended asset allocation. Rebalancing — selling over-performing assets and buying under-performers — restores your target weights and keeps risk in check. Learn the triggers and mechanics.</p>
+        <div class="knowledge-card-footer">
+          <a href="contact.html" class="kc-read-link">Talk to an Advisor <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+
+      <!-- 12 -->
+      <article class="knowledge-card reveal d-6" data-category="mutual-funds" role="listitem" aria-label="Direct vs Regular mutual fund plans article">
+        <span class="knowledge-category">Mutual Funds</span>
+        <h3>Direct vs Regular Mutual Fund Plans: The Real Difference</h3>
+        <p>Direct plans have lower expense ratios than regular plans — but that doesn't always mean you should invest in them directly. Without professional guidance, the wrong fund choice or missed review can cost far more than the saved expense ratio.</p>
+        <div class="knowledge-card-footer">
+          <a href="contact.html" class="kc-read-link">Talk to an Advisor <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+
+      <!-- 13 -->
+      <article class="knowledge-card reveal d-1" data-category="insurance" role="listitem" aria-label="Health insurance inclusions and exclusions article">
+        <span class="knowledge-category">Insurance</span>
+        <h3>Health Insurance: Key Inclusions &amp; Exclusions Explained</h3>
+        <p>Not all health conditions and treatments are covered by default. Pre-existing diseases, waiting periods, room rent limits, and sub-limits are often misunderstood. Here's what to look for before purchasing a health policy.</p>
+        <div class="knowledge-card-footer">
+          <a href="contact.html" class="kc-read-link">Talk to an Advisor <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+
+      <!-- 14 -->
+      <article class="knowledge-card reveal d-2" data-category="risk-management" role="listitem" aria-label="Market volatility and SIP article">
+        <span class="knowledge-category">Risk Management</span>
+        <h3>How Market Volatility Actually Helps Your SIP</h3>
+        <p>Counterintuitively, market dips are your friend when investing through SIPs. During volatile periods, your fixed monthly amount buys more units — a phenomenon called rupee-cost averaging — which improves long-term returns when markets recover.</p>
+        <div class="knowledge-card-footer">
+          <a href="contact.html" class="kc-read-link">Talk to an Advisor <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+
+    </div><!-- /.knowledge-grid -->
+
+    <!-- No results message -->
+    <p class="knowledge-no-results" id="knowledgeNoResults" aria-live="polite" style="display:none;">No articles found in this category.</p>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CTA BANNER
+═══════════════════════════════════════ -->
+<section class="cta-banner" aria-labelledby="cta-heading">
+  <div class="cta-banner-inner">
+    <span class="section-label" style="color:rgba(232,244,248,0.7);">Take the First Step</span>
+    <h2 id="cta-heading">Ready to Put This Knowledge to Work?</h2>
+    <p>Book a free 30-minute consultation with our financial advisors. Let's build a plan tailored to your goals, risk profile, and timeline.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-primary btn-lg">
+        Book Free Consultation
+        <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <a href="https://wa.me/919815519057" class="btn btn-ghost btn-lg" target="_blank" rel="noopener noreferrer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.12 1.528 5.856L.057 23.882l6.187-1.622A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.368l-.36-.213-3.672.964.981-3.593-.234-.369A9.818 9.818 0 1112 21.818z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/ElevateWealthServicesLogo.png" alt="Elevate Wealth Services">
+        <p>Your trusted partner for Mutual Fund Advisory, Insurance Solutions, and Trading &amp; Investing Services across India.</p>
+        <address>Cash Dhara Bazar, Near Bawa Lal Mandir,<br>Karmon Deori, Amritsar, Punjab</address>
+        <div class="social-links" aria-label="Social media links">
+          <a href="https://wa.me/919815519057" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.12 1.528 5.856L.057 23.882l6.187-1.622A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.368l-.36-.213-3.672.964.981-3.593-.234-.369A9.818 9.818 0 1112 21.818z"/></svg>
+          </a>
+          <a href="mailto:arvinder@elevatewealthservices.com" class="social-link" aria-label="Email us">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Quick links">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="knowledge.html">Knowledge Hub</a></li>
+          <li><a href="contact.html">Book Consultation</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Knowledge categories">
+        <h4>Knowledge Topics</h4>
+        <ul class="footer-links">
+          <li><a href="knowledge.html">Mutual Funds Guide</a></li>
+          <li><a href="knowledge.html">Insurance Basics</a></li>
+          <li><a href="knowledge.html">Tax Planning</a></li>
+          <li><a href="knowledge.html">Market Literacy</a></li>
+          <li><a href="knowledge.html">Portfolio Strategy</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="f-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.34 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+919815519057">+91 98155 19057</a>
+        </div>
+        <div class="f-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:arvinder@elevatewealthservices.com">arvinder@elevatewealthservices.com</a>
+        </div>
+        <div class="f-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <address>Cash Dhara Bazar, Near Bawa Lal Mandir, Karmon Deori, Amritsar</address>
+        </div>
+        <div class="f-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <p>Mon&ndash;Fri: 9:30 AM &ndash; 6:30 PM<br>Sat: 10:00 AM &ndash; 4:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Elevate Wealth Services. All rights reserved.</p>
+    </div>
+    <p class="footer-disclaimer">
+      Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Insurance is the subject matter of solicitation. Past performance is not indicative of future results. Elevate Wealth Services is an AMFI Registered Mutual Fund Distributor and IRDAI Licensed Insurance Agent.
+    </p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

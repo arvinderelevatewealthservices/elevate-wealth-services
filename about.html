@@ -1,345 +1,262 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>About Us - ElevateWealthServices</title>
-    <meta name="description" content="Learn about ElevateWealthServices, an AMFI-registered mutual fund distributor offering insurance solutions and trading & investing support from Amritsar.">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="About ElevateWealthServices">
-    <meta property="og:description" content="Discover our mission, vision, and client-first approach across mutual funds, insurance, and trading & investing services.">
-    <meta property="og:url" content="https://elevatewealthservices.com/about.html">
-    <meta property="og:image" content="https://elevatewealthservices.com/images/og-banner.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About ElevateWealthServices">
-    <meta name="twitter:description" content="Learn how we serve investors with transparent advisory across mutual funds, insurance, and trading & investing.">
-    <meta name="twitter:image" content="https://elevatewealthservices.com/images/og-banner.png">
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        @media (max-width: 768px) {
-            h1 { font-size: 1.75rem !important; }
-            h2 { font-size: 1.5rem !important; }
-            h3 { font-size: 1.25rem !important; }
-            p { font-size: 0.95rem !important; }
-        }
-
-        @media (max-width: 640px) {
-            h1 { font-size: 1.5rem !important; }
-            h2 { font-size: 1.25rem !important; }
-            h3 { font-size: 1.05rem !important; }
-            p { font-size: 0.9rem !important; }
-
-            section { padding: 2rem 1rem !important; }
-
-            .grid-2-col { grid-template-columns: 1fr !important; }
-            .grid-3-col { grid-template-columns: 1fr !important; }
-            .flex-reverse-mobile { flex-direction: column-reverse !important; }
-
-            /* Force all 2-col grids to stack */
-            div[style*="grid-template-columns: 1fr 1fr"] {
-                grid-template-columns: 1fr !important;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>About Us — Elevate Wealth Services</title>
+  <meta name="description" content="Learn about Elevate Wealth Services — an AMFI-registered, IRDAI-certified, SEBI-compliant financial advisory firm based in Amritsar, dedicated to elevating your wealth.">
+  <meta property="og:title" content="About Us — Elevate Wealth Services">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elevatewealthservices.com/about.html">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Premium Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="images/ElevateWealthServicesLogo.png" alt="ElevateWealthServices">
-            </a>
-            <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html" class="nav-cta">Book a Consultation</a></li>
-            </ul>
+
+<!-- NAVIGATION -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Elevate Wealth Services — Home">
+      <img src="images/ElevateWealthServicesLogo.png" alt="Elevate Wealth Services">
+    </a>
+    <ul class="nav-links" role="menubar">
+      <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+      <li role="none"><a href="about.html" role="menuitem">About</a></li>
+      <li role="none"><a href="services.html" role="menuitem">Services</a></li>
+      <li role="none"><a href="knowledge.html" role="menuitem">Knowledge Hub</a></li>
+      <li role="none"><a href="contact.html" class="nav-cta-btn" role="menuitem">Book a Consultation</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMobile">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE NAVIGATION OVERLAY -->
+<div class="nav-mobile" id="navMobile" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <button class="nav-mobile-close" id="navMobileClose" aria-label="Close navigation">&#x2715;</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="knowledge.html">Knowledge Hub</a>
+  <a href="contact.html" class="mobile-cta">Book a Consultation</a>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PAGE HERO
+═══════════════════════════════════════ -->
+<section class="page-hero" aria-label="About page hero">
+  <div class="page-hero-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+  <div class="page-hero-grid" aria-hidden="true"></div>
+  <div class="page-hero-content">
+    <span class="section-label">Our Story</span>
+    <h1>About Elevate Wealth<br><span class="gradient-text">Services</span></h1>
+    <p>A trusted, regulated financial advisory built on integrity, expertise, and long-term client relationships — from Amritsar to the world.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     WHO WE ARE
+═══════════════════════════════════════ -->
+<section class="about-intro section-pad" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-left reveal-left">
+        <span class="section-label">Who We Are</span>
+        <h2 id="about-heading">Your Financial Growth<br>Is Our Purpose</h2>
+        <p>Elevate Wealth Services is a premium financial advisory firm based in Amritsar, Punjab. We are AMFI registered, IRDAI certified, and SEBI compliant — a fully regulated platform dedicated to helping individuals and families build, grow, and protect their wealth.</p>
+        <p>Founded on the belief that expert financial guidance should be accessible, transparent, and genuinely client-first, we have served hundreds of investors across India with personalized strategies for mutual funds, insurance, and trading.</p>
+        <p>Our approach combines regulatory rigor with human understanding — we take the time to know your goals, understand your risk appetite, and craft financial solutions that grow with you at every stage of life.</p>
+        <div class="about-facts" role="list" aria-label="Key facts">
+          <div class="about-fact" role="listitem">
+            <span class="about-fact-num gradient-text">100%</span>
+            <span class="about-fact-label">Regulatory-Aligned Process</span>
+          </div>
+          <div class="about-fact" role="listitem">
+            <span class="about-fact-num gradient-text">3</span>
+            <span class="about-fact-label">Service Categories</span>
+          </div>
+          <div class="about-fact" role="listitem">
+            <span class="about-fact-num gradient-text">20+</span>
+            <span class="about-fact-label">Partner Institutions</span>
+          </div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section style="padding: 3rem 1rem; background: linear-gradient(to bottom right, #f0f9ff, #eff6ff, white);">
-        <div class="max-w-4xl" style="text-align: center;">
-            <h1 style="font-size: 2.25rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">About ElevateWealthServices</h1>
-            <p style="font-size: 1rem; color: #4b5563; line-height: 1.6;">A professional financial services platform committed to helping individuals and families achieve financial freedom through transparent, client-first advisory and comprehensive wealth solutions.</p>
+      </div>
+      <div class="about-right reveal-right">
+        <div class="vm-card">
+          <div class="vm-block">
+            <div class="vm-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h3>Our Vision</h3>
+            <p>To be India's most trusted boutique financial advisory firm — empowering every client with the knowledge, tools, and confidence to achieve financial independence and legacy wealth.</p>
+          </div>
+          <div class="vm-block vm-block-alt">
+            <div class="vm-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3>Our Mission</h3>
+            <p>To provide transparent, regulated, and personalized financial solutions that help each client systematically build long-term wealth while being protected against life's uncertainties.</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Who We Are -->
-    <section style="padding: 3rem 1rem; background: white;">
-        <div class="max-w-7xl">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center;">
-                <div>
-                    <h2 style="font-size: 1.75rem; font-weight: 700; color: #111827; margin-bottom: 1rem;">Who We Are</h2>
-                    <div style="display: flex; flex-direction: column; gap: 1rem; color: #4b5563; font-size: 0.95rem; line-height: 1.7;">
-                        <p><strong style="color: #111827;">ElevateWealthServices</strong> is a comprehensive financial services platform headquartered in Amritsar, specializing in Mutual Fund distribution, Insurance solutions, and Trading & Investing services.</p>
-                        <p>As an <strong style="color: #111827;">AMFI-registered Mutual Fund Distributor</strong>, we are committed to providing professional, transparent, and goal-oriented financial advisory services to investors across India.</p>
-                        <p>We serve diverse clients—from first-time investors to experienced traders. What unites them is their trust in our commitment to their financial well-being.</p>
-                    </div>
-                </div>
 
-                <div style="background: linear-gradient(to bottom right, #dbeafe, #bfdbfe); border-radius: 1rem; padding: 2rem; display: flex; flex-direction: column; gap: 2rem;">
-                    <div style="display: flex; gap: 1rem;">
-                        <span style="font-size: 2rem; flex-shrink: 0;">👁️</span>
-                        <div>
-                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Our Vision</h3>
-                            <p style="color: #374151; line-height: 1.6;">To be the most trusted financial services partner in India, empowering every individual to achieve financial independence through disciplined investing and informed financial decisions.</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; gap: 1rem;">
-                        <span style="font-size: 2rem; flex-shrink: 0;">🎯</span>
-                        <div>
-                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Our Mission</h3>
-                            <p style="color: #374151; line-height: 1.6;">To simplify financial planning through transparent advice, personalized strategies, continuous education, and unwavering commitment to client success.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+<!-- ═══════════════════════════════════════
+     OUR VALUES
+═══════════════════════════════════════ -->
+<section class="values-section section-pad" aria-labelledby="values-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Our Core Principles</span>
+      <h2 id="values-heading">The Values That Guide Us</h2>
+      <p>Everything we do is grounded in these six principles — they define how we serve our clients and build lasting relationships.</p>
+      <div class="teal-rule" aria-hidden="true"></div>
+    </div>
+    <div class="values-grid" role="list">
+      <div class="value-card reveal d-1" role="listitem">
+        <div class="value-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
         </div>
-    </section>
-
-    <!-- Core Values -->
-    <section style="padding: 3rem 1rem; background: #f9fafb;">
-        <div class="max-w-7xl">
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <h2 style="font-size: 1.75rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Our Core Values</h2>
-                <p style="font-size: 0.95rem; color: #4b5563; max-width: 48rem; margin: 0 auto;">The principles that guide every decision we make and every recommendation we provide</p>
-            </div>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
-                <div style="background: white; border-radius: 0.75rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
-                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 3.5rem; height: 3.5rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, #0284c7, #0369a1); color: white; margin-bottom: 1.5rem; font-size: 1.5rem;">🛡️</div>
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Trust & Integrity</h3>
-                    <p style="color: #4b5563;">We operate with complete honesty and transparency. Your trust is our most valuable asset.</p>
-                </div>
-
-                <div style="background: white; border-radius: 0.75rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
-                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 3.5rem; height: 3.5rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, #0284c7, #0369a1); color: white; margin-bottom: 1.5rem; font-size: 1.5rem;">🎯</div>
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Client-Centric Focus</h3>
-                    <p style="color: #4b5563;">Every strategy is made with one question: "Is this in the client's best interest?"</p>
-                </div>
-
-                <div style="background: white; border-radius: 0.75rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
-                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 3.5rem; height: 3.5rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, #0284c7, #0369a1); color: white; margin-bottom: 1.5rem; font-size: 1.5rem;">🏆</div>
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Professional Excellence</h3>
-                    <p style="color: #4b5563;">AMFI-certified, IRDAI-compliant, continuously updated with market knowledge.</p>
-                </div>
-
-                <div style="background: white; border-radius: 0.75rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
-                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 3.5rem; height: 3.5rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, #0284c7, #0369a1); color: white; margin-bottom: 1.5rem; font-size: 1.5rem;">📈</div>
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Long-Term Vision</h3>
-                    <p style="color: #4b5563;">We focus on sustainable wealth creation, not quick gains.</p>
-                </div>
-
-                <div style="background: white; border-radius: 0.75rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
-                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 3.5rem; height: 3.5rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, #0284c7, #0369a1); color: white; margin-bottom: 1.5rem; font-size: 1.5rem;">❤️</div>
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Empathy & Understanding</h3>
-                    <p style="color: #4b5563;">We listen, understand, and care about your financial journey.</p>
-                </div>
-
-                <div style="background: white; border-radius: 0.75rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
-                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 3.5rem; height: 3.5rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, #0284c7, #0369a1); color: white; margin-bottom: 1.5rem; font-size: 1.5rem;">⚡</div>
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">Innovation & Adaptability</h3>
-                    <p style="color: #4b5563;">While our values are timeless, our methods evolve with market changes.</p>
-                </div>
-            </div>
+        <h4>Transparency</h4>
+        <p>We are always honest about fees, risks, and returns. No hidden charges, no misleading projections.</p>
+      </div>
+      <div class="value-card reveal d-2" role="listitem">
+        <div class="value-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         </div>
-    </section>
-
-    <!-- What Sets Us Apart -->
-    <section style="padding: 3rem 1rem; background: linear-gradient(to bottom right, #f0f9ff, #eff6ff);">
-        <div class="max-w-7xl">
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <h2 style="font-size: 1.75rem; font-weight: 700; color: #111827; margin-bottom: 0.75rem;">What Sets Us Apart</h2>
-            </div>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                <div style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
-                        <span style="color: #16a34a;">✓</span>
-                        Hybrid Model: Online + Offline
-                    </h3>
-                    <p style="color: #4b5563; line-height: 1.6;">Access your portfolio digitally 24/7, but also have the option to visit our Amritsar office for face-to-face consultations. The best of both worlds.</p>
-                </div>
-
-                <div style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
-                        <span style="color: #16a34a;">✓</span>
-                        Educational Focus
-                    </h3>
-                    <p style="color: #4b5563; line-height: 1.6;">We educate you about investment concepts and financial planning principles. Informed investors make better decisions.</p>
-                </div>
-
-                <div style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
-                        <span style="color: #16a34a;">✓</span>
-                        No Product Pushing
-                    </h3>
-                    <p style="color: #4b5563; line-height: 1.6;">We're advisors focused on your well-being, not salespeople meeting targets. Our recommendations are based on your needs, not our commissions.</p>
-                </div>
-
-                <div style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
-                        <span style="color: #16a34a;">✓</span>
-                        Lifelong Support
-                    </h3>
-                    <p style="color: #4b5563; line-height: 1.6;">Your financial journey doesn't end after the first investment. We provide continuous support throughout your financial life.</p>
-                </div>
-            </div>
+        <h4>Client First</h4>
+        <p>Your financial wellbeing is our primary motivation. Every recommendation is made in your best interest.</p>
+      </div>
+      <div class="value-card reveal d-3" role="listitem">
+        <div class="value-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
         </div>
-    </section>
-
-    <!-- Office Info -->
-    <section style="padding: 3rem 1rem; background: white;">
-        <div class="max-w-7xl">
-            <div style="background: linear-gradient(to bottom right, #111827, #1f2937); border-radius: 1rem; padding: 2rem; color: white;">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;">
-                    <div>
-                        <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Visit Our Office</h2>
-                        <p style="color: #d1d5db; line-height: 1.6; margin-bottom: 1.5rem; font-size: 0.9rem;">We believe in the power of personal connections. Our office in Amritsar is open for consultations, document signing, or simply a friendly conversation about your financial goals.</p>
-                        
-                        <div style="display: flex; flex-direction: column; gap: 1rem;">
-                            <div style="display: flex; gap: 1rem;">
-                                <span style="font-size: 1.5rem;">📍</span>
-                                <div>
-                                    <h3 style="font-weight: 600; margin-bottom: 0.25rem;">Address</h3>
-                                    <p style="color: #d1d5db;">ElevateWealthServices<br>Cash Dhara Bazar, Near Bawa Lal Mandir<br>Karmon Deori, Amritsar</p>
-                                </div>
-                            </div>
-
-                            <div style="display: flex; gap: 1rem;">
-                                <span style="font-size: 1.5rem;">🕒</span>
-                                <div>
-                                    <h3 style="font-weight: 600; margin-bottom: 0.25rem;">Office Hours</h3>
-                                    <p style="color: #d1d5db;">Monday - Friday: 9:30 AM - 6:30 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
-                                </div>
-                            </div>
-
-                            <div style="display: flex; gap: 1rem;">
-                                <span style="font-size: 1.5rem;">📞</span>
-                                <div>
-                                    <h3 style="font-weight: 600; margin-bottom: 0.25rem;">Contact</h3>
-                                    <p style="color: #d1d5db;">+91 98155 19057<br><a href="mailto:arvinder@elevatewealthservices.com" style="color: #38bdf8;">arvinder@elevatewealthservices.com</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(1rem); border-radius: 1rem; padding: 1.5rem;">
-                        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">Our Commitment to You</h3>
-                        <div style="display: flex; flex-direction: column; gap: 1rem; color: #d1d5db;">
-                            <p style="display: flex; align-items: center; gap: 0.75rem;">
-                                <span style="font-size: 1.5rem;">🤝</span>
-                                <span>Always putting your financial interests first</span>
-                            </p>
-                            <p style="display: flex; align-items: center; gap: 0.75rem;">
-                                <span style="font-size: 1.5rem;">🔒</span>
-                                <span>Maintaining complete confidentiality of your financial data</span>
-                            </p>
-                            <p style="display: flex; align-items: center; gap: 0.75rem;">
-                                <span style="font-size: 1.5rem;">📊</span>
-                                <span>Providing honest, unbiased advice</span>
-                            </p>
-                            <p style="display: flex; align-items: center; gap: 0.75rem;">
-                                <span style="font-size: 1.5rem;">⚡</span>
-                                <span>Responding promptly to your queries</span>
-                            </p>
-                            <p style="display: flex; align-items: center; gap: 0.75rem;">
-                                <span style="font-size: 1.5rem;">📈</span>
-                                <span>Continuously helping you achieve your goals</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <h4>Long-Term Thinking</h4>
+        <p>We build wealth systematically over time — not through speculation, but through disciplined compounding.</p>
+      </div>
+      <div class="value-card reveal d-4" role="listitem">
+        <div class="value-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         </div>
-    </section>
-
-    <!-- Trusted Partners & Compliance Section -->
-    <section style="padding: 2.5rem 1rem; background: linear-gradient(to right, #f8fafc, white, #eff6ff);">
-        <div class="max-w-7xl">
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <p style="font-size: 0.85rem; font-weight: 600; color: #0284c7; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Trust & Compliance</p>
-                <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 0.5rem;">Our Regulatory Standards</h3>
-                <p style="font-size: 0.9rem; color: #4b5563;">Certified with all major financial regulators for your complete protection</p>
-            </div>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; align-items: center;">
-                <!-- AMFI -->
-                <div style="background: white; border-radius: 1rem; padding: 1rem; text-align: center; border: 1px solid #e5e7eb; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(2, 132, 199, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 10px rgba(0, 0, 0, 0.05)';">
-                    <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🏛️</div>
-                    <p style="font-weight: 700; color: #0284c7; margin: 0; font-size: 0.95rem;">AMFI Registered</p>
-                    <p style="color: #4b5563; font-size: 0.8rem; margin: 0.25rem 0 0 0;">Mutual Fund Distributor</p>
-                </div>
-
-                <!-- IRDAI -->
-                <div style="background: white; border-radius: 1rem; padding: 1rem; text-align: center; border: 1px solid #e5e7eb; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(16, 185, 129, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 10px rgba(0, 0, 0, 0.05)';">
-                    <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🛡️</div>
-                    <p style="font-weight: 700; color: #10b981; margin: 0; font-size: 0.95rem;">IRDAI Certified</p>
-                    <p style="color: #4b5563; font-size: 0.8rem; margin: 0.25rem 0 0 0;">Insurance Agent</p>
-                </div>
-
-                <!-- SEBI -->
-                <div style="background: white; border-radius: 1rem; padding: 1rem; text-align: center; border: 1px solid #e5e7eb; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(245, 158, 11, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 10px rgba(0, 0, 0, 0.05)';">
-                    <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">📊</div>
-                    <p style="font-weight: 700; color: #f59e0b; margin: 0; font-size: 0.95rem;">SEBI Compliant</p>
-                    <p style="color: #4b5563; font-size: 0.8rem; margin: 0.25rem 0 0 0;">Broker Partner</p>
-                </div>
-            </div>
+        <h4>Regulatory Integrity</h4>
+        <p>We operate under strict AMFI, IRDAI, and SEBI guidelines — your investments are always protected.</p>
+      </div>
+      <div class="value-card reveal d-5" role="listitem">
+        <div class="value-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer style="background: linear-gradient(to bottom right, #1f2937, #111827); color: #d1d5db;">
-        <div class="max-w-7xl" style="padding: 2.5rem 1rem;">
-            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
-                <!-- Company Info -->
-                <div class="footer-section">
-                    <div style="display: flex; align-items: center; gap: 0.4rem; margin-bottom: 1rem;">
-                        <img src="images/ElevateWealthServicesLogo.png" alt="ElevateWealthServices" style="height: 2.5rem; width: auto; object-fit: contain;">
-                    </div>
-                    <p style="color: #9ca3af; font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.75rem;">Your trusted partner for Mutual Fund Advisory, Insurance Solutions, and Trading Services.</p>
-                    <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem;">
-                        <span>📍</span>
-                        <span>Cash Dhara Bazar, Near Bawa Lal Mandir, Karmon Deori, Amritsar</span>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="footer-section">
-                    <h3 style="color: white; font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">Quick Links</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                        <li><a href="index.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">Home</a></li>
-                        <li><a href="about.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">About Us</a></li>
-                        <li><a href="services.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">Services</a></li>
-                        <li><a href="contact.html" style="color: #d1d5db; text-decoration: none; font-size: 0.85rem;">Book</a></li>
-                    </ul>
-                </div>
-
-                <!-- Services -->
-                <div class="footer-section">
-                    <h3 style="color: white; font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">Services</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                        <li style="font-size: 0.85rem; color: #d1d5db;">Mutual Funds</li>
-                        <li style="font-size: 0.85rem; color: #d1d5db;">Life Insurance</li>
-                        <li style="font-size: 0.85rem; color: #d1d5db;">Health Insurance</li>
-                        <li style="font-size: 0.85rem; color: #d1d5db;">Trading & Investing</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 1.5rem;">
-                <p style="font-size: 0.8rem; color: #9ca3af; text-align: center; margin: 0;">© 2026 ElevateWealthServices. All rights reserved.</p>
-            </div>
+        <h4>Lifelong Relationships</h4>
+        <p>We are not transactional. We become your financial partner for life, growing with your evolving needs.</p>
+      </div>
+      <div class="value-card reveal d-6" role="listitem">
+        <div class="value-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
         </div>
-    </footer>
+        <h4>Continuous Learning</h4>
+        <p>We constantly update our knowledge to bring you the most current strategies and market intelligence.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script src="js/script.js"></script>
+<!-- ═══════════════════════════════════════
+     CTA BANNER
+═══════════════════════════════════════ -->
+<section class="cta-banner" aria-label="Call to action">
+  <div class="cta-banner-inner">
+    <div class="reveal">
+      <span class="section-label">Let's Connect</span>
+      <h2>Ready to Begin Your Journey?</h2>
+      <p>Take the first step toward financial clarity — a free, no-obligation consultation tailored to your goals.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary btn-lg">
+          Book a Free Consultation <span class="btn-arrow" aria-hidden="true">&#8594;</span>
+        </a>
+        <a href="https://wa.me/919815519057" class="btn btn-ghost btn-lg" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp chat">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.12 1.528 5.856L.057 23.882l6.187-1.622A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.368l-.36-.213-3.672.964.981-3.593-.234-.369A9.818 9.818 0 1112 21.818z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/ElevateWealthServicesLogo.png" alt="Elevate Wealth Services">
+        <p>Your trusted partner for Mutual Fund Advisory, Insurance Solutions, and Trading &amp; Investing Services across India.</p>
+        <address>Cash Dhara Bazar, Near Bawa Lal Mandir,<br>Karmon Deori, Amritsar, Punjab</address>
+        <div class="social-links" aria-label="Social media links">
+          <a href="https://wa.me/919815519057" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.12 1.528 5.856L.057 23.882l6.187-1.622A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.368l-.36-.213-3.672.964.981-3.593-.234-.369A9.818 9.818 0 1112 21.818z"/></svg>
+          </a>
+          <a href="mailto:arvinder@elevatewealthservices.com" class="social-link" aria-label="Email us">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Quick links">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="knowledge.html">Knowledge Hub</a></li>
+          <li><a href="contact.html">Book Consultation</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Our services">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="services.html#mutual-funds">Mutual Fund Advisory</a></li>
+          <li><a href="services.html#insurance">Insurance Solutions</a></li>
+          <li><a href="services.html#trading">Trading &amp; Investing</a></li>
+          <li><a href="contact.html">Free Consultation</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="f-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.34 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+919815519057">+91 98155 19057</a>
+        </div>
+        <div class="f-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:arvinder@elevatewealthservices.com">arvinder@elevatewealthservices.com</a>
+        </div>
+        <div class="f-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <address>Cash Dhara Bazar, Near Bawa Lal Mandir, Karmon Deori, Amritsar</address>
+        </div>
+        <div class="f-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <p>Mon–Fri: 9:30 AM – 6:30 PM<br>Sat: 10:00 AM – 4:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Elevate Wealth Services. All rights reserved.</p>
+
+    </div>
+    <p class="footer-disclaimer">
+      Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Insurance is the subject matter of solicitation. Past performance is not indicative of future results. Elevate Wealth Services is an AMFI Registered Mutual Fund Distributor and IRDAI Licensed Insurance Agent.
+    </p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
